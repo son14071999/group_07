@@ -1,5 +1,5 @@
 .header{
-	height: 100px;
+	height: 130px;
 	background-color: white;
 }
 .header-top{
@@ -55,18 +55,18 @@
 	padding-left: 37px;
 }
 .rowww{
-	padding-top: 15px;
+	padding-top: 5px;
 }
 .khoi-slide {
 	width: 100%;
-	height: 650px;
+	height: 550px;
 	position: relative;
 	padding-top: 50px;
 }
 
 .cac-slide {
 	width: 100%;
-	height: 650px;
+	height: 550px;
 	overflow: hidden;
 }
 .slide img{
