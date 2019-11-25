@@ -1,3 +1,4 @@
+/*start header*/
 .header{
 	height: 130px;
 	background-color: white;
@@ -105,140 +106,113 @@ span#next{
 	z-index: 10;
 	cursor: pointer;
 }
-.main.row{
-	height: 1000px;
+/*!--end header-->
+*/
+.main1{
+	height: 600px;
+	/* background-color: green; */
 }
-.col-md-8{
-	/* background-color: blue; */
-	display: inline-flex;
-	background-color: #e5e5e5;
-}
-.col-md-4{
-
-background-color: #e5e5e5;
-
-padding-left: 55px;
-
-padding-right: 50px;
-
-/* padding-top: 39px; */
-}
-.sm4-left {
-    width: 50%;
-    float: left;
-    height: 50%;
-    margin-left: 50px;
-    margin-right: 50px;
-}
-.sm4-right{
-	 width: 50%;
-	 float: left;
-	 height: 50%;
-	 margin-left: 50px;
-	 margin-right: 50px;
-	 margin-top: 36px;
-}
-.main{
-	/* background-color: black; */
-	height: 1000px;
-}
-.main.col-md-12{
+.user{
 	height: 400px;
-	background-color: white;
+	width: 84%;
+	/* background-color: #1a0080; */
+	padding-left: 0;
+	margin-left: 108px;
+	margin: 50px auto;
+	margin-top: 50px;
+	padding-top: 60px;
 }
-
-.main-tren {
-   
-padding-bottom: 50px;
-   
-padding-top: 50px;
-   
-height: 200px;
-   
-background-color: white;
-   
-margin-top: 50px;
-   
-margin-bottom: 50px;
+.baithi{
+	/* height: 580px; */
+	/* width: 84%; */
+	/* background-color: green; */
+	padding-left: 500px;
+	margin-left: 108px;
+	margin: 50px auto;
 }
-.main-duoi{
-
-padding-top: 2px;
-
-margin-top: -2px;
+.note {
+	padding: 60px auto;
+	/* margin: 122px; */
+	margin-left: 103px;
+	/* border: aqua; */
+	border-radius: 3px;
+	border-top-style: inset;
+	margin-right: 107px;
+	border-bottom-style: groove;
+	padding-bottom: 60px;
+	padding-top: 60px;
 }
-
-div.gallery {
-  margin: 17px;
-  border: 1px solid #ccc;
-  float: left;
-  width: 302px;
-  /* padding-left: 60px; */
-}
-
-div.gallery:hover {
-  border: 1px solid #777;
-}
-
-div.gallery img {
-  width: 100%;
-  height: auto;
-}
-
-div.desc {
-  padding: 15px;
-  text-align: center;
-}
-.note{
-	padding-top: 24px;
-	height: 141px;
-	/* background-color: #007f7f; */
-}
-
-.main-duoi col-md-4 {
-	padding-top: 40px;
+.main1 div{
+	border-color: red;
+	border-radius: 3px;
 
 }
-.main-duoi2 .gallery img{
-	width: 100px;
+.note h4{
+	color: red;
 
 }
-.main-tren1{
-	background-color: white;
+.button{
+	color: white;
+	background-color: #007f7f;
+	color: #fff;
+	border-radius: 20px;
+	font-size: 16px;
+	display: inline-block;
+	padding: 10px 20px;
+	cursor: pointer;
+	border: none;
+	margin-left: 570px;
+	margin-bottom: 50px;
+}
+.button a{
+	color: white;
+}
+.thongtin{
+		width: 100%;
+		background-color: #007f7f;
+		height: 50px;
+		padding: 12px;
+		color: white;
 }
 
-
-.duoi{
+.user .row{
+	padding-top: 50px;
+	margin-left: 51px;
+	color: unset;
+	font-family: inherit;
+}
+/*
+.footer{
+	background-color: #007f7f;
+	height: 150px;
+	text-align: center;
+	padding-top: 30px;
+}
+*/
+.footer{
 	background-color: #007f7f;
 	color: white;
 	height: 149px;
 	margin-top: 50px;
 	padding-top: 33px;
 }
-.alignCenter{
-	text-align: center;
+.footer.a{
+	color: white;
 }
 
-.style{
-	display: none;
+.lambai{
+	height: 1000px;
+	/* background-color:blue; */
+	border-block-start-width: inherit;
+	/* border-block-start: unset; */
+	/* border: blue; */
+	padding: 50px;
+	/* border-bottom-left-radius: inherit; */
+	/* border-color: red; */
+	border-top: groove;
+	margin: 85px;
+	border-bottom: groove;
 }
-		
-/* Position the "next button" to the right */
-.dot {
-	cursor: pointer;
-	 height: 15px;
-	  width: 15px;
-	 margin: 0 2px;
-	background-color: #bbb;
-	border-radius: 50%;
-	display: inline-block;
-	transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
- 	background-color: #717171;
-}
-
-.node {
-	 position: fixed;
+.cau1 form{
+	
 }

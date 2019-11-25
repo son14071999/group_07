@@ -37,3 +37,19 @@ label, .form-check-label, h1 {
 	outline-style: none;
 	text-align-last: none;
 }
+
+.submit{
+	color: white;
+	background-color: #007f7f;
+	/* padding-left: 24px; */
+	width: 100%;
+	border-radius: 7px;
+	border: #007f7f;
+}
+.submit:hover{
+	background-color: green;
+	color: white;
+}
+.submit a{
+	color: white;
+}

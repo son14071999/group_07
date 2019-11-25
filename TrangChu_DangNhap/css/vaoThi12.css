@@ -1,0 +1,152 @@
+/*start header*/
+.header{
+	height: 130px;
+	background-color: white;
+}
+.header-top{
+	padding: 23px;
+	background-color: #007f7f;
+	padding: 10px auto;
+	height: 83px;
+	color: white;
+}
+.col-sm-6{
+	display: inline-block;
+}
+.top-left ul li{
+	display: inline-block;
+	margin-left: 45px;
+}
+.top-left{
+	margin-left: 20px;
+	margin-right: 50px;
+	margin-block-start: 8px;
+	margin-block-end: 9px;
+	/* margin-inline-start: 30px; */
+	/* margin-inline-end: 129px; */
+}
+.top-right{
+	margin-right: 30px;
+	margin-block-start: 6px;
+}
+.top-right ul li{
+	display: inline-block;
+	float: right;
+}
+.top-right ul{
+	float: right;
+}
+.header-foot{
+	background-color: #e5e5e5;
+	height: 113px;
+}
+.header-foot .col-md-1{
+	margin-top: 30px;
+}
+.header-foot .col-md-1 a{
+	color: black;
+
+}
+.col-md-1{
+	margin-top: 30px;
+	color: black;
+
+}
+.col-md-1:hover{
+	color: white;
+	background-color: #007f7f!important
+}
+.col-md-1 a:hover{
+	color: white;
+	text-decoration: none
+}
+.header-foot .row .col-md-6{
+	padding-top: 10px;
+	padding-left: 37px;
+}
+.rowww{
+	padding-top: 5px;
+}
+/*!--end header-->
+*/
+.main1{
+	height: 600px;
+	/* background-color: green; */
+}
+.user{
+	height: 400px;
+	width: 84%;
+	/* background-color: #1a0080; */
+	padding-left: 0;
+	margin-left: 108px;
+	margin: 50px auto;
+	margin-top: 50px;
+	padding-top: 60px;
+}
+.baithi{
+	/* height: 580px; */
+	/* width: 84%; */
+	/* background-color: green; */
+	padding-left: 500px;
+	margin-left: 108px;
+	margin: 50px auto;
+}
+.note {
+	padding: 60px auto;
+	/* margin: 122px; */
+	margin-left: 103px;
+	/* border: aqua; */
+	border-radius: 3px;
+	border-top-style: inset;
+	margin-right: 107px;
+	border-bottom-style: groove;
+	padding-bottom: 60px;
+	padding-top: 60px;
+}
+.main1 div{
+	border-color: red;
+	border-radius: 3px;
+
+}
+.note h4{
+	color: red;
+
+}
+.button{
+	color: white;
+	background-color: #007f7f;
+	color: #fff;
+	border-radius: 20px;
+	font-size: 16px;
+	display: inline-block;
+	padding: 10px 20px;
+	cursor: pointer;
+	border: none;
+	margin-left: 102px;
+}
+.button a{
+	color: white;
+}
+.thongtin{
+		width: 100%;
+		background-color: #007f7f;
+		height: 50px;
+		padding: 12px;
+		color: white;
+}
+
+.user .row{
+	padding-top: 50px;
+	margin-left: 51px;
+	color: unset;
+	font-family: inherit;
+}
+.footer{
+	background-color: #007f7f;
+	height: 150px;
+	text-align: center;
+	padding-top: 30px;
+}
+.footer.a{
+	color: white;
+}
