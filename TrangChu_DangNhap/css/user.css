@@ -1,0 +1,244 @@
+.header{
+	height: 130px;
+	background-color: white;
+}
+.header-top{
+	padding: 23px;
+	background-color: #007f7f;
+	padding: 10px auto;
+	height: 83px;
+	color: white;
+}
+.col-sm-6{
+	display: inline-block;
+}
+.top-left ul li{
+	display: inline-block;
+	margin-left: 45px;
+}
+.top-left{
+	margin-left: 20px;
+	margin-right: 50px;
+	margin-block-start: 8px;
+	margin-block-end: 9px;
+	/* margin-inline-start: 30px; */
+	/* margin-inline-end: 129px; */
+}
+.top-right{
+	margin-right: 30px;
+	margin-block-start: 6px;
+}
+.top-right ul li{
+	display: inline-block;
+	float: right;
+}
+.top-right ul{
+	float: right;
+}
+.header-foot{
+	background-color: #e5e5e5;
+	height: 100px;
+}
+.header-foot .col-md-1{
+	margin-top: 30px;
+}
+.header-foot .col-md-1 a{
+	color: black;
+
+}
+.col-md-1{
+	margin-top: 30px;
+	color: black;
+
+}
+.col-md-1:hover{
+	color: white;
+	background-color: #007f7f!important
+}
+.col-md-1 a:hover{
+	color: white;
+	text-decoration: none
+}
+.header-foot .row .col-md-6{
+	padding-top: 10px;
+	padding-left: 37px;
+}
+.rowww{
+	padding-top: 5px;
+}
+.khoi-slide {
+	width: 100%;
+	height: 550px;
+	position: relative;
+	padding-top: 50px;
+}
+
+.cac-slide {
+	width: 100%;
+	height: 550px;
+	overflow: hidden;
+}
+.slide img{
+	width: 100%;
+}
+.slide.active{
+	opacity: 1;
+	visibility: visible;
+}
+.nut-slide span{
+	color: white;
+	font-size: 60px;
+	opacity: 0.3;
+
+}
+span#btn-prev{
+	position: absolute;
+	top: 40%; /* can chinh tren top so voi hinh*/
+	left: 5px;
+	z-index: 10;
+	cursor: pointer;
+}
+span#next{
+	position: absolute;
+	top: 40%;
+	right: 5px;
+	z-index: 10;
+	cursor: pointer;
+}
+.main.row{
+	height: 1000px;
+}
+.col-md-8{
+	/* background-color: blue; */
+	display: inline-flex;
+	background-color: #e5e5e5;
+}
+.col-md-4{
+
+background-color: #e5e5e5;
+
+padding-left: 55px;
+
+padding-right: 50px;
+
+/* padding-top: 39px; */
+}
+.sm4-left {
+    width: 50%;
+    float: left;
+    height: 50%;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.sm4-right{
+	 width: 50%;
+	 float: left;
+	 height: 50%;
+	 margin-left: 50px;
+	 margin-right: 50px;
+	 margin-top: 36px;
+}
+.main{
+	/* background-color: black; */
+	height: 1000px;
+}
+.main.col-md-12{
+	height: 400px;
+	background-color: white;
+}
+
+.main-tren {
+   
+padding-bottom: 50px;
+   
+padding-top: 50px;
+   
+height: 200px;
+   
+background-color: white;
+   
+margin-top: 50px;
+   
+margin-bottom: 50px;
+}
+.main-duoi{
+
+padding-top: 2px;
+
+margin-top: -2px;
+}
+
+div.gallery {
+  margin: 17px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 302px;
+  /* padding-left: 60px; */
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+.note{
+	padding-top: 24px;
+	height: 141px;
+	/* background-color: #007f7f; */
+}
+
+.main-duoi col-md-4 {
+	padding-top: 40px;
+
+}
+.main-duoi2 .gallery img{
+	width: 100px;
+
+}
+.main-tren1{
+	background-color: white;
+}
+
+
+.duoi{
+	background-color: #007f7f;
+	color: white;
+	height: 212px;
+	margin-top: 50px;
+	padding-top: 50px;
+}
+.alignCenter{
+	text-align: center;
+}
+
+.style{
+	display: none;
+}
+		
+/* Position the "next button" to the right */
+.dot {
+	cursor: pointer;
+	 height: 15px;
+	  width: 15px;
+	 margin: 0 2px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+ 	background-color: #717171;
+}
+
+.node {
+	 position: fixed;
+}
