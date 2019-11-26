@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		user
+	</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Thi truc tuyen </title>
+	<!-- Import Boostrap css, js, font awesome here -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">       
+	<link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">    
+	<link href="css/user.css" rel="stylesheet">
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+	<style type="text/css">
+		.title {
+			margin-top: 100px;
+		    margin-left: 90px;
+		}
+		.noidunguser {
+			margin-top: 20px;
+		    margin-left: 90px;
+		}
+		label.lb {
+			    width: 190px;
+			}
+
+		button.suathongtinuser {
+			margin-left: 100px;
+    color: red;
+    background: #aaff56;
+    border-radius: 200px;
+    width: 100px;
+}
+input.tendangnhap {
+    width: 500px;
+}
+input.hovaten {
+    width: 500px;
+}
+input.email {
+    width: 500px;
+}input.dienthoai {
+    width: 500px;
+}
+input.doituong {
+    width: 100px;
+}
+select.diachi {
+    width: 500px;
+}
+select.truong {
+    width: 500px;
+}
+input.lop {
+    width: 500px;
+}
+	</style>
+	
+</head>
+<body>
+	<!-- <div class="page"> -->
+		<div class="header">
+			<div class="header-top">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="top-left">
+							<ul>
+								<li><i class="fa fa-phone"></i> +8801912345678
+								</li>
+								<li><i class="fa fa-clock"></i> 
+									Mon to Fri: 8.00 - 12.00
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="top-right">
+							<ul style="color: white">
+								<li>
+									<a href="DangKi.html" style="color: white">
+										Đăng kí
+									</a>
+								</li>
+								<li>/</li>
+								<li>
+									<a href="dangNhap.html" style="color: white">
+										Đăng nhập
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			
+			</div>
+			<div class="header-foot">
+				<div class="rowww">
+					<div class="row">
+						
+						<div class="col-md-6">
+							
+								<img src="./images/logo.png" height="50px"width="172px" >
+							
+						</div>
+						
+						<div class="col-md-1">
+							<a href="index.html">Trang chủ</a>
+						</div>
+						<div class="col-md-1">
+							<a href="#">Xếp hạng</a>
+						</div>
+						<div class="col-md-1">
+							<a  href="#"> Các kì thi</a>
+						</div>
+						<div class="col-md-1">
+							<a href="#"> Hướng dẫn</a>
+						</div>
+						<div class="col-md-1">
+							<a href="#"> Giới thiệu</a>
+						</div>
+						<div class="col-md-1">
+							
+						</div>
+					</div>	
+				</div>
+			</div>
+		</div>
+
+
+
+		<!-- content -->
+		<div class="mainuser">
+			<form class="suathongtinuser" method="post">
+				<div class="title">
+					<h3 class="_1rMPZ">
+						<span style="color: #5fbf00">THAY ĐỔI THÔNG TIN CÁ NHÂN</span>
+					</h3>
+				</div>
+				
+				<div class="noidunguser">
+					<p>
+						<label class="lb">Tên đăng nhập</label>
+
+						<span class="dinhdang">
+							<h1000><input type="text" name="tendangnhap" class="tendangnhap" value="vuivui" disabled></h1000>
+						</span>
+					</p>
+					<p>
+						<label class="lb">Họ và tên<span style="color: red">*</span></label>
+						<span class="dinhdang">
+							<h1000><input type="text" name="hovaten" class="hovaten" value="Bùi Thị Vui"></h1000>
+						</span>
+					</p>
+					<p>
+						<label class="lb">Địa chỉ email<span style="color: red">*</span></label>
+						<span class="dinhdang">
+							<h1000><input type="mail" name="email" class="email" value="vui@gmail.com"></h1000>
+						</span>
+					</p>
+					<p>
+						<label class="lb">Điện thoại di động<span style="color: red">*</span></label>
+						<span class="dinhdang">
+							<h1000><input type="text" name="dienthoai" class="dienthoai" value="0123456789"></h1000>
+						</span>
+					</p>
+					<p>
+						<label class="lb">Đối tượng<span style="color: red"></span></label>
+						<span class="dinhdang">
+							<h1000><input type="text" name="doituong" class="doituong" value="HỌC SINH" disabled></h1000>
+						</span>
+
+					</p>
+					<p>
+						<label class="lb">Địa chỉ<span style="color: red">*</span></label>
+						<span class="dinhdang">
+												<select name="province" class="diachi" >
+															
+															<option value="59cdc41a9d2a1700271c2b09" selected>TP Hà Nội</option>
+															<option value="59cdc41a9d2a1700271c2b0a">TP Hồ Chí Minh</option>
+															<option value="59cdc41a9d2a1700271c2b0b">An Giang</option>
+															<option value="59cdc41a9d2a1700271c2b0d">Bắc Kạn</option>
+															<option value="59cdc41a9d2a1700271c2b10">Bắc Ninh</option>
+															<option value="59cdc41b9d2a1700271c2b16">Cà Mau</option>
+															<option value="59cdc41b9d2a1700271c2b20">Hà Nam</option>
+															<option value="59cdc41b9d2a1700271c2b21">Hà Tĩnh</option>
+															<option value="59cdc41b9d2a1700271c2b23">TP Hải Phòng</option>
+															<option value="59cdc41b9d2a1700271c2b24">Hòa Bình</option>
+															<option value="59cdc41b9d2a1700271c2b22">Hải Dương</option>
+															<option value="59cdc41b9d2a1700271c2b30">Ninh Bình</option>
+
+														</select>
+													
+						</span>
+						
+					</p>
+					<p>
+						<label class="lb">Trường<span style="color: red">*</span></label>
+						<span class="dinhdang">
+								<select name="school" class="truong">
+														<option value>Chọn trường</option>
+														<option value="59cdc4239d2a1700271c3210" selected>Trường THCS DL Lương Thế Vinh</option>
+														<option value="59cdc4239d2a1700271c3211">Trường THCS DL Marie - Curie</option>
+														<option value="59cdc4239d2a1700271c3214">Trường THCS Nguyễn Trãi</option>
+														<option value="59cdc4239d2a1700271c3216">Trường THCS Phan Đình Giót</option>
+														<option value="59cdc4239d2a1700271c3218">Trường THCS Thanh Xuân Nam</option>
+														<option value="59cdc4239d2a1700271c321a">Trường Tiểu học Đặng Trần Côn</option>
+														<option value="59cdc4239d2a1700271c321b">Trường Tiểu học Đặng Trần Côn B</option>
+														<option value="59cdc4239d2a1700271c321d">Trường Tiểu học Hạ Đình</option>
+														<option value="59cdc4239d2a1700271c3221">Trường Tiểu học Nguyễn Trãi</option>
+														<option value="59cdc4779d2a1700271c8c7e">Trường Tiểu học Kim Đồng</option>
+														<option value="59cdc4789d2a1700271c8d97">Trường Tiểu học Tây Sơn</option>
+														<option value="59cdc4789d2a1700271c8db4">Trường Tiểu học Thái Thịnh</option>
+														<option value="59cdc4939d2a1700271cae1d">Trường Tiểu học Song ngữ Brendon</option>
+														<option value="59cdc4969d2a1700271cb103">Trường Tiểu học Thanh Xuân Nam</option>
+														<option value="5bdfefdef1095a001c6d255f">Trường Tiểu học Thanh Xuân Bắc</option>
+														<option value="5db275bd966b2d0026f18cd5">Trường Tiểu học Nguyễn Tuân</option>
+													</select>
+												
+													
+						</span>
+						
+					</p>
+					<p>
+						<label class="lb">Lớp<span style="color: red">*</span></label>
+						<span class="dinhdang">
+							<h1000><input type="text" name="lop" class="lop" value="1" ></h1000>
+						</span>
+
+					</p>
+					<p>
+						<div id="fullcalendar">
+						<label class="lb">Ngày sinh<span style="color: red">*</span></label>
+						<span class="dinhdang">
+							<input type="text" name="birthday" />
+
+<script>
+$(function() {
+  $('input[name="birthday"]').daterangepicker({
+    singleDatePicker: true,
+    showDropdowns: true,
+    minYear: 1901,
+    maxYear: parseInt(moment().format('YYYY'),10)
+  }, function(start, end, label) {
+    var years = moment().diff(start, 'years');
+    alert("You are " + years + " years old!");
+  });
+});
+</script>
+						</span>
+						</div>
+					</p>
+
+				</div>
+				
+					<div class="sbutton">
+					<button type="submit" class="suathongtinuser">Sửa đổi</button>
+				</div>
+
+			</form>		
+
+		</div>
+
+
+		
+		<div class="duoi">
+				<p class="alignCenter">
+					<b>KidSchool </b>là trang luyện thi trực tuyến các môn học cho bé từ lớp 1 đến lớp 5<br> với nhiều chủ đề khác nhau như : <b>toán,tiếng anh, âm nhạc, ...</b>
+				</p>
+				<p class="alignCenter"><b>Giới thiệu</b>| <b>Chính sách bảo mật </b> | <b>Điều khoản sử dụng</b> | <b>Liên hệ</b></p>
+			</div>
+			
+			
+</body>
