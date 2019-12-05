@@ -17,8 +17,7 @@
 	<div class="container">
 		@include('block.header')
 		@include('block.slider')
-		<div class="row thantrang">
-		</div>
+		@yield('content')
 		@include('block.footed')
 	</div>
 

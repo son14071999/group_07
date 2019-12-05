@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('trangchu.trangchu');
 });
 
 Route::get('index',function(){
@@ -28,3 +28,5 @@ Route::get('login',function(){
 });
 Route::post('login','Taikhoan@login')->name('login');
 Route::get('logout','Taikhoan@logout');
+Route::get('delamnhieu/{k}','ListDeThi@lamNhieu')->name('delamnhieu');
+Route::get('dethi/{idDe}','ControllerDethi@showde')->name('dethi');
