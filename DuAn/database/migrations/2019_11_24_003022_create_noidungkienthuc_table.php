@@ -16,7 +16,7 @@ class CreateNoidungkienthucTable extends Migration
         Schema::create('noidungkienthuc', function (Blueprint $table) {
             $table->increments('id');
             $table->tinyInteger('lop')->default(0);
-            $table->string('mon');
+            $table->string('mon')->nullable();
             $table->text('nd')->default('');
             $table->timestamps();
         });

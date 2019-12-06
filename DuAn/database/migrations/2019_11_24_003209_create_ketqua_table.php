@@ -16,9 +16,9 @@ class CreateKetquaTable extends Migration
         Schema::create('ketqua', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('id_deThi')->unsigned();
-            $table->foreign('id_deThi')->references('id')->on('dethi');
+            $table->foreign('id_deThi')->references('id')->on('dethi')->onDelete('cascade');
             $table->bigInteger('id_user')->unsigned();
-            $table->foreign('id_user')->references('id')->on('users');
+            $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade');
             $table->integer('score')->default(0);
             $table->timestamps();
         });

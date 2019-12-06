@@ -16,11 +16,11 @@ class CreateCautraloiTable extends Migration
         Schema::create('cautraloi', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('id_cauHoi')->unsigned();
-            $table->foreign('id_cauHoi')->references('id')->on('cauhoi');
+            $table->foreign('id_cauHoi')->references('id')->on('cauhoi')->onDelete('cascade');
             $table->text('nd');
             $table->string('maCTL');
             $table->tinyInteger('trangThai')->default(0);
-            $table->string('image')->default('');
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }

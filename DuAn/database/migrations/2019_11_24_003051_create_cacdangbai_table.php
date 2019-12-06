@@ -16,7 +16,7 @@ class CreateCacdangbaiTable extends Migration
         Schema::create('cacdangbai', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('id_ndkt')->unsigned();
-            $table->foreign('id_ndkt')->references('id')->on('noidungkienthuc');
+            $table->foreign('id_ndkt')->references('id')->on('noidungkienthuc')->onDelete('cascade');
             $table->text('nd');
             $table->timestamps();
         });

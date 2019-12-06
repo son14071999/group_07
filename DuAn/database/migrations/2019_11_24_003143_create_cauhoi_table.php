@@ -16,15 +16,15 @@ class CreateCauhoiTable extends Migration
         Schema::create('cauhoi', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('id_de')->unsigned();
-            $table->foreign('id_de')->references('id')->on('dethi');
+            $table->foreign('id_de')->references('id')->on('dethi')->onDelete('cascade');
             $table->tinyInteger('doKho')->default(3);
             $table->integer('cauSo');            
-            $table->string('image')->default('');
-            $table->text('nd');
+            $table->string('image')->nullable();
+            $table->text('nd')->nullable();
             $table->integer('id_ndkt')->unsigned();
-            $table->foreign('id_ndkt')->references('id')->on('noidungkienthuc');
+            $table->foreign('id_ndkt')->references('id')->on('noidungkienthuc')->onDelete('cascade');
             $table->integer('id_cdb')->unsigned();
-            $table->foreign('id_cdb')->references('id')->on('cacdangbai');
+            $table->foreign('id_cdb')->references('id')->on('cacdangbai')->onDelete('cascade');
             $table->timestamps();
         });
     }

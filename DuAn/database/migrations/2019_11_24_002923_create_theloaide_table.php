@@ -15,7 +15,7 @@ class CreateTheloaideTable extends Migration
     {
         Schema::create('theloaide', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('theLoai')->default('');
+            $table->string('theLoai');
             $table->tinyInteger('lop')->default(0);
             $table->timestamps();
         });

@@ -19,9 +19,11 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->tinyInteger('quyen')->default(0);
-            $table->string('avata');
+            $table->string('avata')->nullable();
             $table->tinyInteger('trangThai')->default(0);
             $table->integer('score');
+            $table->string('SDT')->nullable();
+            $table->string('diaChi')->nullable();
             // $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();
             $table->timestamps();
