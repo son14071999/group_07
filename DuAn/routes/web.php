@@ -30,3 +30,5 @@ Route::post('login','Taikhoan@login')->name('login');
 Route::get('logout','Taikhoan@logout');
 Route::get('delamnhieu/{k}','ListDeThi@lamNhieu')->name('delamnhieu');
 Route::get('dethi/{idDe}','ControllerDethi@showde')->name('dethi');
+Route::post('xuly','ControllerDethi@xuly')->name('xuly');
+

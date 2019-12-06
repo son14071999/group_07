@@ -2,11 +2,18 @@
 @section('content')
 	<div class="container" style="background: #FFFFFF; min-height: 700px;">
 		<p style="text-align: center;font-size: 40px; color: #2BF07A;">{{$de['tenDe']}}</p>
-		{!! Form::label('email', 'Địa chỉ Email') !!}
-		{!! Form::text("text", $value = null, $attributes = array()) !!}
-		{!! Form::textarea("text", $value, $attributes = array()) !!}
-		{!! Form::email("text", $value = null, $attributes = array()) !!}
-		{!! Form::password("text") !!}
-		{!! Form::file("text", $attributes = array()) !!}
+		<?php $i=0; ?>
+		{!! Form::open(['route' => ['xuly']]) !!}
+			{!! Form::hidden('id_de', 12345) !!}
+			@foreach($cauhoi as $ch)
+			<label>{{$ch->cauSo}}.  {{$ch->nd}}</label><br />
+				@foreach($cautl[$i] as $tl)
+					{!! Form::radio($ch->cauSo, $tl->maCTL) !!}{{ $tl->nd }}<br />
+				@endforeach
+				<?php $i++; ?>
+				<p></p>
+			@endforeach
+			{!! Form::submit('Nop bai') !!}
+		{!! Form::close() !!}
 	</div>
 @endsection

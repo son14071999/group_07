@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Auth;
 use App\dethi;
 use App\cauhoi;
 use App\cautraloi;
+use App\luukq;
 class ControllerDethi extends Controller
 {
     //
@@ -21,13 +22,46 @@ class ControllerDethi extends Controller
             $cautl[] = cauhoi::find($ch->id)->cautraloi()->get();
             # code...
         }
-        var_dump($cautl);
-        exit();
-        return view('dethi.showde', compact('cauhoi','de'));
+        // tạo kq tạm thời
+        // $kq = new luukq();
+        // $dapan = array();
+        // foreach ($cautl as $tls) {
+        //     foreach ($tls as $tl) {
+        //         # code...
+        //         if($tl['trangThai']==1){
+        //             $dapan[] = $tl['maCTL'];
+        //         }
+        //     }
+        // }
+        // $dapan = implode(' ',$dapan);
+        // echo $dapan; 
+        // $kq->thoigian = $de->thoiGian;
+        // $kq->maDe = $de->id;
+        // $kq->kq = $dapan; 
+        // $kq->save();
+        // exit();
+        return view('dethi.showde', compact('cauhoi','de','cautl'));
     }
 
-    public function logout(Request $req){
-    	Auth::logout();
-    	return redirect('/');
+    // public function xuly(Request $req){
+    //     var_dump($de);
+    // }
+
+    public function xuly(Request $req){
+        // foreach ($req as $key => $value) {
+        //     # code...
+        //     echo $key;
+        //     var_dump($value);
+        //     echo '<br /><br /><br /><hr />';
+        // }
+        $kq = array();
+        foreach ($req->request as $key => $value) {
+            # code...
+            // if(is_int($key)){
+                $kq[$key] = $value;
+            // }
+        }
+        var_dump($kq);
+
     }
 }
