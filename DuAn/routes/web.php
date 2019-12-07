@@ -32,3 +32,74 @@ Route::get('delamnhieu/{k}','ListDeThi@lamNhieu')->name('delamnhieu');
 Route::get('dethi/{idDe}','ControllerDethi@showde')->name('dethi');
 Route::post('xuly','ControllerDethi@xuly')->name('xuly');
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// admin 
+
+// account user
+$managerUserController = 'UserController@';
+Route::get('dmf',function(){
+	return view('admins.page.demoform');
+});
+Route::get('trangchu-admin', $managerUserController.'showIndex');
+Route::get('all-account', $managerUserController.'showAllAccount');
+
+Route::get('add-account', $managerUserController.'addAccount');
+Route::post('save-account', $managerUserController.'saveAccount');
+
+Route::get('/edit-account/{user_id}', $managerUserController.'editAccount');
+Route::post('update-account/{user_id}', $managerUserController.'updateAccount');
+Route::get('/delete-account/{user_id}', $managerUserController.'deleteAccount');
+
+Route::get('/edit-dm/{id}', function(){
+	echo "sss";
+});
+// table rank
+$managerTableRankController = 'TableRankController@';
+Route::get('bang-xep-hang', $managerTableRankController.'showTableRank');
+
+//category-exam
+$managerCategroyExamController = 'ManagerCategoryExamController@';
+Route::get('add-category-exam', $managerCategroyExamController.'add_category_exam');
+Route::post('save-category-exam', $managerCategroyExamController.'save_category_exam');
+
+Route::get('all-category-exam', $managerCategroyExamController.'all_category_exam');
+Route::get('tttttt/{theloaide_id}', $managerCategroyExamController.'demo');
+
+Route::get('edit-category-exam/{theloaide_id}', $managerCategroyExamController.'edit_category_exam');
+Route::post('update-category-exam/{theloaide_id}', $managerCategroyExamController.'update_category_exam');
+
+Route::get('delete-category-exam/{theloaide_id}', $managerCategroyExamController.'delete_category_exam');
+
+//exam
+$managerExamController = 'ManagerExamController@';
+Route::get('add-exam', $managerExamController.'add_exam');
+Route::post('save-exam', $managerExamController.'save_exam');
+
+Route::get('all-exam', $managerExamController.'all_exam');
+
+
+Route::get('edit-exam/{de_id}', $managerExamController.'edit_exam');
+Route::post('update-exam/{de_id}', $managerExamController.'update_exam');
+
+Route::get('delete-exam/{de_id}', $managerExamController.'delete_exam');
+Route::get('demot', $managerExamController.'demo');
+
+//question 
+$managerQuestionController = 'ManagerQuestionController@';
+
+Route::get('all-question', $managerQuestionController.'all_question');
