@@ -1,6 +1,6 @@
 @extends('admins.admin_layout')
 @section('title')
-Tổng số tài khoản
+Kết quả tìm kiếm 
 @endsection
 @section('content')
  <div class="page-content-wrapper animated fadeInRight">
@@ -24,7 +24,7 @@ Tổng số tài khoản
           </ol>
           <form action="{{ URL::to('search/account')}}" method="post">
           <div class ="timkiem_">
-          <input type="text" name="search" id="search"  placeholder=" Name" /><button id="btntimkiem">timkiem</button>
+          <input type="text" name="search" id="search"  placeholder=" Name" /><button>timkiem</button>
           {{ csrf_field() }}
               <div id="hienthi">
               
@@ -33,7 +33,7 @@ Tổng số tài khoản
 
         </div>
         <div class="col-lg-12"> </div>
-      
+      </div>
       <div class="wrapper-content ">
         <div class="row">
           <div class="col-lg-12">
@@ -44,9 +44,23 @@ Tổng số tài khoản
               <div class="ibox-content collapse show">
                 <div class="widgets-container">
                   
-                  <div>
+                  
+   
+             
+              
+              </div>
+ 
+              
 
+                  <br><br>
+                  <div>
+                    @if(count($users)==0)
+                          <span class="hienthimes">{{ $mes }}</span>
+                    @else
                     <table id="example" class="table  responsive nowrap table-bordered" cellspacing="0" width="100%">
+                     
+                    
+
                       <thead>
                         <tr>
                           <th>id</th>
@@ -85,7 +99,9 @@ Tổng số tài khoản
                         </tr>
                       </tbody>
                       @endforeach
+                      
                     </table>
+                    @endif
                 <!-- phan trang -->
                 <div class="phantrang">
                 {{--  <div class="col-sm-12 col-md-7">
@@ -107,15 +123,6 @@ Tổng số tài khoản
                 </div>
 
                   </div>
-   
-                
-              
-              </div>
- 
-              
-
-                  
-                  
                 </div>
               </div>
             </div>
@@ -127,7 +134,7 @@ Tổng số tài khoản
       
        
         
-      
+      </div>
       
       
 <!-- start footer -->

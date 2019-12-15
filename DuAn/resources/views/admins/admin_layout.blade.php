@@ -7,6 +7,16 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>@yield('title')</title>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style type="text/css">
+  .box{
+    width:600px;
+    margin:0 auto;
+  }
+</style>
+  
   <link href="{{ asset('admin/assets/css/bootstrap.min.css')}}" rel="stylesheet">
   
   <link href="{{ asset('admin/assets/css/font-awesome.min.css')}}" rel="stylesheet">
@@ -15,7 +25,15 @@
   <!-- theme css -->
   <link href="{{ asset('admin/assets/css/theme.css')}}" rel="stylesheet">
   
-
+  <style type="text/css">
+    .timkiem_ {
+    margin-left: 800px;
+    }
+    span.hienthimes {
+    color: black;
+    font-size: 25px;
+}
+  </style>
   
 </head>
 
@@ -40,7 +58,7 @@
           <!-- START USER LOGIN DROPDOWN -->
           <li class="dropdown dropdown-user">
             <a data-close-others="true" data-hover="dropdown" data-toggle="dropdown" class="dropdown-toggle" href="javascript:;">
-            <img src="{{asset('admin/assets/images/teem/a10.jpg')}}" class="rounded-circle" alt=""> <span class="username username-hide-on-mobile"> Susan Wenscombe</span>             <i class="fa fa-angle-down"></i> </a>
+            <img src="{{asset('admin/assets/images/hinhanhbandau.jpg')}}" class="rounded-circle" alt=""> <span class="username username-hide-on-mobile"> Susan Wenscombe</span>             <i class="fa fa-angle-down"></i> </a>
             <ul class="dropdown-menu dropdown-menu-default">
               
               
@@ -138,6 +156,74 @@
   
   <!-- main js -->
   <script src="admin/assets/js/main.js"></script>
+
+  <script>
+  $(document).ready(function(){
+
+   $('#search').keyup(function(){
+    var query = $(this).val(); 
+    if(query != '') 
+    {
+     var _token = $('input[name="_token"]').val(); // token để mã hóa dữ liệu
+     $.ajax({
+      url:"{{ URL::to('search-by-name') }}", 
+      method:"POST", 
+      data:{query:query, _token:_token},
+      success:function(data){ //dữ liệu nhận về
+       $('#hienthi').fadeIn();  
+       $('#hienthi').html(data); 
+     }
+   });
+
+     
+   }
+ });
+
+   $(document).on('click', 'li', function(){  
+    $('#hienthi').val($(this).text());  
+    $('#hienthi').fadeOut();  
+  });  
+
+   
+
+ });
+</script>
+
+
+<script>
+  $(document).ready(function(){
+
+   $('#search_de').keyup(function(){ //bắt sự kiện keyup khi người dùng gõ từ khóa tim kiếm
+    var query = $(this).val(); 
+    if(query != '') 
+    {
+     var _token = $('input[name="_token"]').val(); // token để mã hóa dữ liệu
+     $.ajax({
+      url:"{{ URL::to('/search/by-name') }}", 
+      method:"POST", 
+      data:{query:query, _token:_token},
+      success:function(data){ //dữ liệu nhận về
+       $('#hienthi').fadeIn();  
+       $('#hienthi').html(data); 
+     }
+   });
+
+     
+   }
+ });
+
+   $(document).on('click', 'li', function(){  
+    $('#hienthi').val($(this).text());  
+    $('#hienthi').fadeOut();  
+  });  
+
+   
+
+ });
+</script>
+
+
+
 
 </body>
 

@@ -65,6 +65,10 @@ Route::get('/edit-account/{user_id}', $managerUserController.'editAccount');
 Route::post('update-account/{user_id}', $managerUserController.'updateAccount');
 Route::get('/delete-account/{user_id}', $managerUserController.'deleteAccount');
 
+Route::post('/search-by-name', $managerUserController.'search')->name('search');// tim gan dung 
+Route::post('/search/account', $managerUserController.'search_exacly');// tim dung tuyet doi khi click vao nut tim kiem
+Route::get('/search/account&keyword={keyword}', $managerUserController.'search_xuly');
+
 Route::get('/edit-dm/{id}', function(){
 	echo "sss";
 });
@@ -103,3 +107,15 @@ Route::get('demot', $managerExamController.'demo');
 $managerQuestionController = 'ManagerQuestionController@';
 
 Route::get('all-question', $managerQuestionController.'all_question');
+Route::get('add-question', $managerQuestionController.'add_question');
+Route::post('save-question', $managerQuestionController.'save_question');
+Route::get('delete-question/{question_id}', $managerQuestionController.'delete_question');
+//Route::post('demo', $managerQuestionController.'demo');
+Route::get('edit-question/{question_id}', $managerQuestionController.'edit_question');
+Route::post('update-question/{question_id}', $managerQuestionController.'update_question');
+
+Route::post('/search/by-name', $managerQuestionController.'search');// tim gan dung 
+Route::post('/search/de', $managerQuestionController.'search_exacly');// tim dung tuyet doi khi click vao nut tim kiem
+Route::get('/search/de&keyword={keyword}', $managerQuestionController.'search_xuly');
+
+

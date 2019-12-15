@@ -61,7 +61,7 @@
             <!-- end col-3 -->
           </div>
           <span class="anh">
-          <img src="http://animal.vn/wp-content/uploads/2018/03/1-32.jpg"  alt="" width="100%"></span>
+          <img src="{{ ('admin/assets/images/hinhanhbandau.jpg') }}"  alt="" width="100%"></span>
           
 <!-- start footer -->
         <div class="footer">

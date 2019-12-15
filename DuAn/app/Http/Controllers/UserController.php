@@ -129,5 +129,73 @@ class UserController extends Controller
             return Redirect::to('/all-account');
     }
 
+    public function search(Request $request)
+    {
+        
+            // $output = '';
+            // $users = User::where('name', 'LIKE','%'.$request->search.'%')->get();
+           
+            // if ($users) {
+            //     $output .= '<ul class="dropdown-menu" style="display:block; position:relative">';
+            //     foreach ($users as $key => $user) {
+                    // $output .= '<tr>
+                    // <td>' . $user->id . '</td>
+                    // <td>' . $user->name . '</td>
+                    // <td>' . $user->diaChi . '</td>
+                    // <td>' . $user->SDT . '</td>
+                    // <td>' . $user->email . '</td>
+                    //  <td>' . $user->quyen . '</td>
+                    //   <td>' . $user->trangThai . '</td>
+
+                    // <td><img src="'.('admin/anhuser'.'/'.$value->avata).'" width="36px" height="36px"></td>
+                    //  <td>' . $user->score . '</td>
+                    //  <td>
+                    //         <span class="sua" style="font-size: 22px"><a href="'. URL::to('/edit-account'.'/'.$value->id) .'"><i class="fa fa-check-square-o" aria-hidden="true"></i></a></span>
+                    //        {{--  <label class="sss" style="font-size: 20px; color: red">/</label> --}}
+                    //         <span class="xoa" style="font-size: 22px"><a onclick="return confirm('.'Are you sure to delete?'.')" href="'. URL::to('/delete-account'.'/'.$value->id) .'"><i class="fa fa-times" aria-hidden="true"></i></a></span>
+                    //       </td>
+                    // </tr>';
+             //        $output .= '
+             //                    <li><a href="data/'. $user->id .'">'.$user->name.'</a></li>
+             //                    ';
+             //    }
+            
+             // $output .= '</ul>';
+                    $url='http://localhost:81/DuAnxxx/public/search/account&keyword=';
+                    //$url= url("/search/account$keyword=");
+                    if($request->get('query'))
+                {
+                    $query = $request->get('query');
+                   
+                    $data = User::where('name', 'LIKE',"%{$query}%")->take(5)->get();
+                    $output = '<ul class="dropdown-menu" style="display:block; position:relative">';
+                    foreach($data as $row)
+                    {
+                       $output .= '
+                       <li><a href="'.$url.''.$row->name.'"> '.$row->name.'</a></li>
+                       ';
+                   }
+                   $output .= '</ul>';
+                   echo $output;
+               }
+            //return Response($output);
+        }
+    
+        public function search_exacly(Request $request){
+            $keyWord = $request->search;
+            return Redirect::to('/search/account&keyword='.$keyWord);
+               
+
+            
+        }
+
+        public function search_xuly($keyword){
+
+
+            $messenger='Không có kết quả nào phù hợp với sự tìm kiếm của bạn !';
+            $user=User::where('name',$keyword)->paginate(5);
+               
+                    return view('admins.page_manager_user.search_account', ['users' => $user,'mes'=>$messenger]);
+        }
 
 }

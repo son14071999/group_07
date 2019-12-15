@@ -1,6 +1,6 @@
 @extends('admins.admin_layout')
 @section('title')
-Câu hỏi
+Tìm kiếm theo tên đề
 @endsection
 @section('content')
  <div class="page-content-wrapper animated fadeInRight">
@@ -42,7 +42,11 @@ Câu hỏi
               </div>
               <div class="ibox-content collapse show">
                 <div class="widgets-container">
+                  @if(count($cauhoi)==0)
+                     <span class="hienthimes">{{ $mes }}</span>
+                  @else
                   <div >
+                    
                     <table id="example" class="table  responsive nowrap table-bordered" cellspacing="0" width="100%">
                       <thead>
                         <tr>
@@ -74,23 +78,19 @@ Câu hỏi
                       @foreach($cauhoi as $key => $value)
                       <tbody>
                          <tr>
-                          <td>{{ ($value->id) }}</td>
-                          @foreach($dethi as $vdethi)
-                            @if($value->id_de==$vdethi->id)
-                               <td>{{ $vdethi->tenDe }}</td>
-                            @else
-                            @endif
-                          @endforeach
-                  
-                              <td>{{ $value->doKho }}</td>
-                               <td>{{ $value->cauSo }}</td>
-                               
-                               <td>{{ $value->nd }}</td>
-                               @foreach($cautraloi as $vctl)
+                          <td> {{ $value->id }}</td>
+                          <td>{{ $dethi->tenDe }}</td>
+                          <td>{{ $value->doKho }}</td>
+                          <td>{{ $value->cauSo }}</td>
+                          
+                          <td>{{ $value->nd }}</td>
+                           @foreach($cautraloi as $vctl)
                                   @if($value->id==$vctl->id_cauHoi)
                                       <td>{{ $vctl->nd }}</td>
                                       <td>{{ $vctl->maCTL }}</td>
-                                     
+                                      {{-- @if($vctl->trangThai==1)
+                                          <td>{{ $vctl->maCTL }}</td>
+                                      @endif --}}
                                   @else
 
                                   @endif
@@ -128,9 +128,6 @@ Câu hỏi
                                   @endif
 
                                @endforeach
-
-
-
                           <td>
                             <span class="sua" style="font-size: 22px"><a href="{{ URL::to('/edit-question'.'/'.$value->id) }}"><i class="fa fa-check-square-o" aria-hidden="true"></i></a></span>
                            
@@ -140,6 +137,7 @@ Câu hỏi
                       </tbody>
                       @endforeach
                     </table>
+                   
                 <!-- phan trang -->
                 <div class="phantrang">
                 {{--  <div class="col-sm-12 col-md-7">
@@ -161,6 +159,7 @@ Câu hỏi
                 </div>
 
                   </div>
+                  @endif
                 </div>
               </div>
             </div>

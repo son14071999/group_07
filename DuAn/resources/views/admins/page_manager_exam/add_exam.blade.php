@@ -100,11 +100,11 @@ Thêm đề thi
                          <div class="col-sm-10">
                             <select  name="dokho"  class="custom-select">
                               
-                              <option value="0" >Rất dễ</option>
-                              <option value="1">Dễ</option>
-                              <option value="2">Trung bình</option>
-                              <option value="3" selected>Khó</option>
-                               <option value="4">Rất khó</option>
+                              <option value="1" >Rất dễ</option>
+                              <option value="2">Dễ</option>
+                              <option value="3">Trung bình</option>
+                              <option value="4" selected>Khó</option>
+                               <option value="5">Rất khó</option>
                             </select>
                       </div>
                     </div>
