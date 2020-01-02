@@ -9,7 +9,7 @@ class cauhoi extends Model
     //
     protected $table = "cauhoi";
     public function dethi(){
-    	return $this->belongTo('App\dethi');
+    	return $this->belongTo('App\dethi','id_de');
     }
 
     public function cautraloi(){

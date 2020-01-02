@@ -11,16 +11,16 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call('cauhoi'::class);
-        $this->call('User'::class);
-        $this->call('TheLoaiDe'::class);
-        $this->call('DeThi'::class);
-        $this->call('Noidungkienthuc'::class);
-        $this->call('cacdangbai'::class);
-        $this->call('comment'::class);
-        $this->call('cauhoi'::class);
-        $this->call('cauTL'::class);
-        $this->call('ketQua'::class);
+         $this->call('cauhoi');
+        $this->call('User');
+        $this->call('TheLoaiDe');
+        $this->call('DeThi');
+        $this->call('Noidungkienthuc');
+        $this->call('cacdangbai');
+        $this->call('comment');
+        $this->call('cauhoi');
+        $this->call('cauTL');
+        $this->call('ketQua');
 
 
 
@@ -132,7 +132,7 @@ class comment extends Seeder
     	$mon = array('toán','Lý','Hóa','Sử','Địa','Sinh','Công dân','');
     	for($i=1;$i<=2000;$i++){
     		$k = rand(1,50);
-		
+
     		DB::table('comment')->insert(
 	        		[
 	        			'id_user'=>rand(1,10),
@@ -142,9 +142,9 @@ class comment extends Seeder
 	        			'created_at' => new DateTime(),
 		        	]
 	        		);
-    		
+
     	}
-    	
+
     }
 }
 
@@ -157,7 +157,7 @@ class cauhoi extends Seeder
     public function run()
     {
     	for($i=1;$i<=50;$i++){
-    		
+
     		for($j=1;$j<=50;$j++){
     			// $arr=array('A','B','C','D');
     			// foreach ($arr as $key => $value) {
@@ -177,7 +177,7 @@ class cauhoi extends Seeder
 	        		);
         		// }
     		}
-	    	
+
     	}
     }
 }
@@ -195,7 +195,7 @@ class TheLoaiDe extends Seeder
         	'created_at' => new DateTime(),
     	]
 		);
-	
+
     	DB::table('theloaide')->insert(
         	[
         		'theLoai' => 'Thể loại Đại Học ',
@@ -203,7 +203,7 @@ class TheLoaiDe extends Seeder
             	'created_at' => new DateTime(),
         	]
     	);
-   
+
     	DB::table('theloaide')->insert(
         	[
         		'theLoai' => 'Thể loại IQ ',
@@ -211,7 +211,7 @@ class TheLoaiDe extends Seeder
             	'created_at' => new DateTime(),
         	]
     	);
-  
+
     	DB::table('theloaide')->insert(
         	[
         		'theLoai' => 'Thể loại topic/ielts ',
@@ -228,8 +228,8 @@ class TheLoaiDe extends Seeder
 	        	]
 	    	);
 	    }
-    
-        
+
+
     }
 }
 
@@ -283,8 +283,8 @@ class DeThi extends Seeder
 		  	$str = preg_replace('/(Ỳ|Ý|Ỵ|Ỷ|Ỹ)/', 'Y', $str);
 		  	$str = preg_replace('/(Đ)/', 'D', $str);
 		  	//$str = str_replace(' ', '-', str_replace('&*#39;','",$str));
-		  
-		return $str;	
+
+		return $str;
 	}
     public function run()
     {
@@ -295,7 +295,7 @@ class DeThi extends Seeder
         	$tenDe='Tên đề '.$i.''.rand(10,1000);
         	DB::table('dethi')->insert(
 	        	[
-	        		
+
 	        		'tenDe' => $tenDe,
 	        		'id_theLoaiDe'=>rand(1,7),
 	        		'tenDeKhongDau' => $this->convert_vi_to_en($tenDe),
@@ -311,5 +311,5 @@ class DeThi extends Seeder
         	);
         }
     }
-    
+
 }

@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use App\User;
 use Hash;
@@ -27,7 +26,7 @@ class Taikhoan extends Controller
 	    		'password.min'=>'Password tối tối thiểu 6 kí tự',
 	    		'password.max'=>'Password tối tối đa 20 kí tự',
 	    		'password_confirmation.required'=>'Password không khớp',
-	    		
+
 	    	]
     	);
     	echo 'đăng ký thành công';
@@ -40,8 +39,8 @@ class Taikhoan extends Controller
     	echo $req->email;
     	$user->password=Hash::make($req->password);
     	$user->save();
-    	return redirect('login')->with('thanhcong','Tạo tài khoản thành công. Đăng nhập ngay !');
-    	
+    	return view('signup_in/login')->with('thanhcong','Tạo tài khoản thành công. Đăng nhập ngay !');
+
     }
 
     public function login(Request $req){
@@ -50,7 +49,7 @@ class Taikhoan extends Controller
     	if(Auth::attempt(['name'=>$username, 'password'=>$password]))
     		return redirect('/');
     	else
-    		return redirect('login')->with('loi','Tên đăng nhập hoặc mật khẩu sai');
+    		return redirect('tk/login')->with('loi','Tên đăng nhập hoặc mật khẩu sai');
     }
 
     public function logout(Request $req){
