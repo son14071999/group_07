@@ -17,10 +17,6 @@ class comment extends Model
     	return $this->belongTo('App/dethi');
     }
 
-    public function comment1(){
-    	return $this->belongTo('App/comment');
-    }
-    public function comment2(){
-    	return $this->hasMany('App/comment');
-    }
+
+    
 }

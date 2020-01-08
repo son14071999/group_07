@@ -8,12 +8,11 @@ class cacdangbai extends Model
 {
     //
     protected $table = "cacdangbai";
-    public function noidungchinhthuc()
-    {
-    	return $this->belongsTo('App\noidungkienthuc');
-	}
 
 	public function cauhoi(){
-		return $this->hasMany('App\cauhoi');
+		return $this->hasMany('App\cauhoi','id_cdb');
 	}
+	public function theloaide(){
+	    return $this->belongsTo('App\theloaide');
+    }
 }

@@ -18,6 +18,6 @@ class dethi extends Model
     	return $this->hasMany('App\cauhoi','id_de');
     }
     public function ketqua(){
-    	return $this->hasMany('App\ketqua');
+    	return $this->hasMany('App\ketqua','id_de');
     }
 }
