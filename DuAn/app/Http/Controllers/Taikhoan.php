@@ -1,11 +1,14 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use App\User;
 use Hash;
 use Illuminate\Support\Facades\Auth;
+use Session;
+session_start();
+use DB;
+
 class Taikhoan extends Controller
 {
     //
@@ -27,7 +30,7 @@ class Taikhoan extends Controller
 	    		'password.min'=>'Password tối tối thiểu 6 kí tự',
 	    		'password.max'=>'Password tối tối đa 20 kí tự',
 	    		'password_confirmation.required'=>'Password không khớp',
-	    		
+
 	    	]
     	);
     	echo 'đăng ký thành công';
@@ -40,21 +43,36 @@ class Taikhoan extends Controller
     	echo $req->email;
     	$user->password=Hash::make($req->password);
     	$user->save();
-    	return redirect('login')->with('thanhcong','Tạo tài khoản thành công. Đăng nhập ngay !');
-    	
+    	return view('signup_in/login')->with('thanhcong','Tạo tài khoản thành công. Đăng nhập ngay !');
+
     }
 
     public function login(Request $req){
     	$username = $req['username'];
     	$password = $req['password'];
-    	if(Auth::attempt(['name'=>$username, 'password'=>$password]))
-    		return redirect('/');
-    	else
-    		return redirect('login')->with('loi','Tên đăng nhập hoặc mật khẩu sai');
+    	if(Auth::attempt(['name'=>$username, 'password'=>$password])){
+           $req->session()->put('user', getdate()['seconds'].rand(1,1000));
+    		
+            $user = User::find(Auth::user()->id);
+            $user->trangThai=1;
+            $user->save();
+            return redirect('/');
+        }
+    	else{
+    		return redirect('tk/login')->with('loi','Tên đăng nhập hoặc mật khẩu sai');
+        }
     }
 
     public function logout(Request $req){
+        $user = User::find(Auth::user()->id);
+        $user->trangThai=0;
+        $user->save();
+        // echo "<pre>";
+        // print_r($user);
+        // echo "</pre>";
     	Auth::logout();
+        $req->session()->put('user', 0);
+        
     	return redirect('/');
     }
 }
