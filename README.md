@@ -22,7 +22,7 @@
   - Tính điểm : Dựa vào số câu học sinh chọn thực hiện chấm điểm.
   - Lưu lại kết quả cho học sinh, và xếp hạng các thí sinh theo điểm giảm dần.
 # 5.Cách cài đặt và chạy chương trình
-- b1: clone repo của dự án về máy bằng câu lệnh "git clone link"
+- b1: clone repo của dự án về máy bằng câu lệnh "git clone https://github.com/son14071999/group_07.git"
 - b2: cài đặt các ứng dụng cần thiết để chạy chương trình như 
    * xampp : [Xampp](https://www.apachefriends.org/download.html)
    * Visual code : [VS](https://code.visualstudio.com/)
