@@ -17,5 +17,6 @@ class comment extends Model
     	return $this->belongTo('App/dethi');
     }
 
+
     
 }

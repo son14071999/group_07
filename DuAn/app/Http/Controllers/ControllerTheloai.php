@@ -11,20 +11,29 @@ class ControllerTheloai extends Controller
     function __construct()
     {
 
-        $theloai = theloaide::all();
+        $theloai = theloaide::take(5)->get();
         view()->share(compact('theloai'));
     }
 
     function getTheloai($theLoai)
     {
          //$list_de = theloaide::all();
-        $list_de = dethi::all();
+        $list_tlde = theloaide::all();
+        $id_tl=0;
+        foreach ($list_tlde as $key => $value) {
+           if($theLoai==Str::slug($value->theLoai)){
+            $id_tl=$value->id;
+           }
+        }
+
+        $list_de = dethi::where('id_theLoaiDe',$id_tl)->get();
 ////        $list_de = [];
 ////        foreach($list_de_ban_dau as $tl){
 //            if($tl->theLoai == $theLoai){
 //                $list_de = $tl->dethi();
 //            }
 //        }
+
         return view('homePage', compact('list_de'));
 
 

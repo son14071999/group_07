@@ -5,6 +5,10 @@ use Illuminate\Http\Request;
 use App\User;
 use Hash;
 use Illuminate\Support\Facades\Auth;
+use Session;
+session_start();
+use DB;
+
 class Taikhoan extends Controller
 {
     //
@@ -46,14 +50,33 @@ class Taikhoan extends Controller
     public function login(Request $req){
     	$username = $req['username'];
     	$password = $req['password'];
-    	if(Auth::attempt(['name'=>$username, 'password'=>$password]))
-    		return redirect('/');
-    	else
+    	if(Auth::attempt(['name'=>$username, 'password'=>$password])){
+           $req->session()->put('user', getdate()['seconds'].rand(1,1000));
+    		
+            $user = User::find(Auth::user()->id);
+            $user->trangThai=1;
+            $user->save();
+            if(Auth::user()->quyen==1){
+                 $req->session()->put('admin_id', getdate()['seconds'].rand(1,1000));
+            }
+            return redirect('/');
+        }
+    	else{
     		return redirect('tk/login')->with('loi','Tên đăng nhập hoặc mật khẩu sai');
+        }
     }
 
     public function logout(Request $req){
+        $user = User::find(Auth::user()->id);
+        $user->trangThai=0;
+        $user->save();
+        // echo "<pre>";
+        // print_r($user);
+        // echo "</pre>";
     	Auth::logout();
+        $req->session()->put('user', 0);
+        $req->session()->put('admin_id', 0);
+        
     	return redirect('/');
     }
 }

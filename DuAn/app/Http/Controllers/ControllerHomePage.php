@@ -13,7 +13,7 @@ class ControllerHomePage extends Controller
     {
         $list_de = dethi::all();
         view()->share(compact('list_de'));
-        $theloai = theloaide::all();
+        $theloai = theloaide::take(5)->get();
         view()->share(compact('theloai'));
     }
 

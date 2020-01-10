@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th1 02, 2020 lúc 10:23 AM
+-- Thời gian đã tạo: Th1 10, 2020 lúc 09:10 AM
 -- Phiên bản máy phục vụ: 10.4.10-MariaDB
 -- Phiên bản PHP: 7.3.12
 
@@ -21,6 +21,48 @@ SET time_zone = "+00:00";
 --
 -- Cơ sở dữ liệu: `laravel`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `binhluans`
+--
+
+CREATE TABLE `binhluans` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `content` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `commentable_id` int(11) NOT NULL,
+  `commentable_type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `binhluans`
+--
+
+INSERT INTO `binhluans` (`id`, `user_id`, `content`, `commentable_id`, `commentable_type`, `created_at`, `updated_at`) VALUES
+(1, 1, 'kaghwugwighuwg', 8, 'App\\forum', '2020-01-07 07:59:57', '2020-01-07 07:59:57'),
+(2, 1, 'dddddd', 8, 'App\\forum', '2020-01-07 08:03:52', '2020-01-07 08:03:52'),
+(3, 1, 'jahfafwfwofhwoaifaw', 8, 'App\\forum', '2020-01-07 08:21:44', '2020-01-07 08:21:44'),
+(4, 1, 'djhakgak', 1, 'App\\Binhluan', '2020-01-07 08:24:07', '2020-01-07 08:24:07'),
+(5, 1, 'ngu si', 1, 'App\\Binhluan', '2020-01-07 08:24:55', '2020-01-07 08:24:55'),
+(6, 2, 'ahiwugwg', 1, 'App\\Binhluan', '2020-01-07 09:10:21', '2020-01-07 09:10:21'),
+(7, 1, 'dajgka', 1, 'App\\Binhluan', '2020-01-07 09:20:17', '2020-01-07 09:20:17'),
+(8, 2, 'ngu người', 13, 'App\\forum', '2020-01-07 20:03:04', '2020-01-07 20:03:04'),
+(9, 2, 'hay qua', 8, 'App\\Binhluan', '2020-01-07 20:03:16', '2020-01-07 20:03:16'),
+(10, 1, 'ngu nguoi', 14, 'App\\forum', '2020-01-07 20:11:34', '2020-01-07 20:11:34'),
+(11, 1, 'jnwakgwg', 15, 'App\\forum', '2020-01-09 03:58:27', '2020-01-09 03:58:27'),
+(12, 2, 'hay qua', 15, 'App\\forum', '2020-01-09 03:59:24', '2020-01-09 03:59:24'),
+(13, 2, 'kwjgwg', 11, 'App\\Binhluan', '2020-01-09 03:59:32', '2020-01-09 03:59:32'),
+(14, 1, 'akgwkgw', 16, 'App\\forum', '2020-01-09 04:03:05', '2020-01-09 04:03:05'),
+(15, 2, 'agkwjgkwg', 16, 'App\\forum', '2020-01-09 04:04:29', '2020-01-09 04:04:29'),
+(16, 2, 'kwjgwkg', 14, 'App\\Binhluan', '2020-01-09 04:04:41', '2020-01-09 04:04:41'),
+(17, 13, 'admin comemnt', 17, 'App\\forum', '2020-01-09 10:30:28', '2020-01-09 10:30:28'),
+(18, 13, 'ngu ngu', 16, 'App\\forum', '2020-01-09 10:30:55', '2020-01-09 10:30:55'),
+(19, 13, 'ngu ngu', 14, 'App\\Binhluan', '2020-01-09 10:31:08', '2020-01-09 10:31:08'),
+(20, 1, 'gwgwgwg', 18, 'App\\forum', '2020-01-10 01:08:16', '2020-01-10 01:08:16');
 
 -- --------------------------------------------------------
 
@@ -61,7 +103,28 @@ INSERT INTO `cacdangbai` (`id`, `id_tl`, `nd`, `created_at`, `updated_at`) VALUE
 (18, 6, 'nội dung dạng bài 63', '2019-12-17 02:50:49', NULL),
 (19, 7, 'nội dung dạng bài 71', '2019-12-17 02:50:49', NULL),
 (20, 7, 'nội dung dạng bài 72', '2019-12-17 02:50:49', NULL),
-(21, 7, 'nội dung dạng bài 73', '2019-12-17 02:50:49', NULL);
+(21, 7, 'nội dung dạng bài 73', '2019-12-17 02:50:49', NULL),
+(22, 1, 'nội dung dạng bài 11', '2019-12-16 19:50:48', NULL),
+(23, 1, 'nội dung dạng bài 12', '2019-12-16 19:50:48', NULL),
+(24, 1, 'nội dung dạng bài 13', '2019-12-16 19:50:48', NULL),
+(25, 2, 'nội dung dạng bài 21', '2019-12-16 19:50:48', NULL),
+(26, 2, 'nội dung dạng bài 22', '2019-12-16 19:50:48', NULL),
+(27, 2, 'nội dung dạng bài 23', '2019-12-16 19:50:48', NULL),
+(28, 3, 'nội dung dạng bài 31', '2019-12-16 19:50:48', NULL),
+(29, 3, 'nội dung dạng bài 32', '2019-12-16 19:50:48', NULL),
+(30, 3, 'nội dung dạng bài 33', '2019-12-16 19:50:48', NULL),
+(31, 4, 'nội dung dạng bài 41', '2019-12-16 19:50:48', NULL),
+(32, 4, 'nội dung dạng bài 42', '2019-12-16 19:50:48', NULL),
+(33, 4, 'nội dung dạng bài 43', '2019-12-16 19:50:48', NULL),
+(34, 5, 'nội dung dạng bài 51', '2019-12-16 19:50:48', NULL),
+(35, 5, 'nội dung dạng bài 52', '2019-12-16 19:50:48', NULL),
+(36, 5, 'nội dung dạng bài 53', '2019-12-16 19:50:48', NULL),
+(37, 6, 'nội dung dạng bài 61', '2019-12-16 19:50:48', NULL),
+(38, 6, 'nội dung dạng bài 62', '2019-12-16 19:50:49', NULL),
+(39, 6, 'nội dung dạng bài 63', '2019-12-16 19:50:49', NULL),
+(40, 7, 'nội dung dạng bài 71', '2019-12-16 19:50:49', NULL),
+(41, 7, 'nội dung dạng bài 72', '2019-12-16 19:50:49', NULL),
+(42, 7, 'nội dung dạng bài 73', '2019-12-16 19:50:49', NULL);
 
 -- --------------------------------------------------------
 
@@ -14732,7 +14795,100 @@ INSERT INTO `dethi` (`id`, `tenDe`, `tenDeKhongDau`, `id_theLoaiDe`, `nam`, `mon
 (47, 'Tên đề 47359', 'Ten de 47359', 3, 2015, 'Sinh', 1, 125, 3, 180, '2019-12-17 02:50:47', NULL, NULL),
 (48, 'Tên đề 48478', 'Ten de 48478', 4, 2018, 'Công dân', 0, 55, 5, 70, '2019-12-17 02:50:48', NULL, NULL),
 (49, 'Tên đề 49522', 'Ten de 49522', 7, 2013, 'Công dân', 1, 56, 5, 70, '2019-12-17 02:50:48', NULL, NULL),
-(50, 'Tên đề 50208', 'Ten de 50208', 4, 2010, 'Công dân', 0, 32, 1, 40, '2019-12-17 02:50:48', NULL, NULL);
+(50, 'Tên đề 50208', 'Ten de 50208', 4, 2010, 'Công dân', 0, 32, 1, 40, '2019-12-17 02:50:48', NULL, NULL),
+(51, 'longdz', 'longdz', 3, 12111111, 'ta', 0, 0, 4, 212, '2020-01-09 08:48:47', '2020-01-09 08:52:13', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `forums`
+--
+
+CREATE TABLE `forums` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `forums`
+--
+
+INSERT INTO `forums` (`id`, `user_id`, `title`, `slug`, `description`, `created_at`, `updated_at`) VALUES
+(1, 1, 'ngu ngoc1', 'ngu-ngoc1', '<p>agwgw</p>', '2020-01-07 04:02:28', '2020-01-07 04:12:18'),
+(2, 1, 'ngu ngockk', 'ngu-ngockk', '<p>sfr</p>', '2020-01-07 04:22:05', '2020-01-07 04:22:05'),
+(3, 1, 'ngu ngockk', 'ngu-ngockk', '<p>sfr</p>', '2020-01-07 04:22:43', '2020-01-07 04:22:43'),
+(4, 1, 'ngu ngockk', 'ngu-ngockk', '<p>sfr</p>', '2020-01-07 04:24:26', '2020-01-07 04:24:26'),
+(5, 1, 'awe', 'awe', '<p>wgwgr</p>', '2020-01-07 04:31:07', '2020-01-07 04:31:07'),
+(6, 1, 'bao long dep trai gauhgke', 'bao-long-dep-trai-gauhgke', '<p>wgw</p>', '2020-01-07 04:33:04', '2020-01-07 04:38:02'),
+(7, 1, 'dep traiddd', 'dep-traiddd', '<p>wgeeee</p>', '2020-01-07 04:49:28', '2020-01-07 04:49:28'),
+(8, 1, 'ngu ngoc', 'ngu-ngoc', '<p>dddddd</p>', '2020-01-07 07:29:56', '2020-01-07 07:29:56'),
+(9, 1, 'ưhgwiuaigwa', 'uhgwiuaigwa', '<p>kawgkwjagwkag</p>', '2020-01-07 09:32:18', '2020-01-07 09:32:18'),
+(10, 1, 'hahaha', 'hahaha', '<p>wahgjawghwjg</p>', '2020-01-07 11:02:34', '2020-01-07 11:02:34'),
+(11, 1, 'bai viet 124', 'bai-viet-124', '<p>ưkuhwigw</p>', '2020-01-07 19:19:19', '2020-01-07 19:19:19'),
+(12, 2, 'bai viet 4i5858', 'bai-viet-4i5858', '<p>gưgwewagw</p>', '2020-01-07 20:01:07', '2020-01-07 20:01:07'),
+(13, 2, 'bai viet 4i5858êuue', 'bai-viet-4i5858euue', '<p>gưgwewagw</p>', '2020-01-07 20:02:21', '2020-01-07 20:02:21'),
+(14, 2, 'ưuhigwiug hahaha', 'uuhigwiug-hahaha', '<p>ưgwgwg</p>', '2020-01-07 20:04:01', '2020-01-07 20:18:34'),
+(15, 1, 'ăgwgwg1231', 'agwgwg1231', '<p>ưkjangkjwa</p>', '2020-01-09 03:58:11', '2020-01-09 03:58:38'),
+(16, 1, 'jwghkjwgkw 1414', 'jwghkjwgkw-1414', '<p><strong>ahwgwgw<em>jghwgkjwgưkg</em></strong></p>', '2020-01-09 04:02:46', '2020-01-09 04:03:23'),
+(17, 13, 'bai viet cua admin', 'bai-viet-cua-admin', '<p>admin admin</p>', '2020-01-09 10:30:09', '2020-01-09 10:30:09'),
+(18, 1, 'gwgwgw', 'gwgwgw', '<p>gwgwgwg</p>', '2020-01-10 01:08:05', '2020-01-10 01:08:05');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `forum_dethi`
+--
+
+CREATE TABLE `forum_dethi` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `forum_id` int(10) UNSIGNED NOT NULL,
+  `dethi_id` int(10) UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `forum_tag`
+--
+
+CREATE TABLE `forum_tag` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `forum_id` int(11) NOT NULL,
+  `tag_id` int(11) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `forum_tag`
+--
+
+INSERT INTO `forum_tag` (`id`, `forum_id`, `tag_id`, `created_at`, `updated_at`) VALUES
+(1, 5, 1, NULL, NULL),
+(2, 6, 1, NULL, NULL),
+(4, 7, 1, NULL, NULL),
+(5, 1, 1, NULL, NULL),
+(6, 8, 2, NULL, NULL),
+(7, 9, 1, NULL, NULL),
+(8, 9, 2, NULL, NULL),
+(9, 10, 1, NULL, NULL),
+(10, 11, 1, NULL, NULL),
+(11, 12, 1, NULL, NULL),
+(12, 12, 2, NULL, NULL),
+(13, 13, 1, NULL, NULL),
+(14, 13, 2, NULL, NULL),
+(15, 14, 1, NULL, NULL),
+(16, 15, 1, NULL, NULL),
+(17, 15, 2, NULL, NULL),
+(18, 16, 1, NULL, NULL),
+(20, 17, 1, NULL, NULL),
+(21, 17, 2, NULL, NULL),
+(22, 18, 1, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -18968,7 +19124,53 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (51, '2019_11_24_003143_create_cauhoi_table', 1),
 (52, '2019_11_24_003209_create_ketqua_table', 1),
 (53, '2019_11_24_003240_create_cautraloi_table', 1),
-(54, '2019_12_05_223205_create_table_luukq_table', 1);
+(54, '2019_12_05_223205_create_table_luukq_table', 1),
+(56, '2020_01_05_091731_create_forums_table', 2),
+(61, '2020_01_07_100744_create_forum_dethi_table', 3),
+(62, '2019_11_24_003022_create_noidungkienthuc_table', 4),
+(63, '2020_01_05_104642_create_forums_table', 4),
+(66, '2020_01_07_112358_create_forum_dethi_table', 5),
+(67, '2020_01_07_112541_create_tags_table', 5),
+(68, '2020_01_07_112733_create_forum_tag_table', 5),
+(69, '2020_01_07_144505_create_binhluans_table', 6),
+(70, '2020_01_07_164950_create_views_table', 7);
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `noidungkienthuc`
+--
+
+CREATE TABLE `noidungkienthuc` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `lop` tinyint(4) NOT NULL DEFAULT 0,
+  `mon` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `nd` text COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `tags`
+--
+
+CREATE TABLE `tags` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `tags`
+--
+
+INSERT INTO `tags` (`id`, `name`, `slug`, `created_at`, `updated_at`) VALUES
+(1, 'bao loi', 'baoloi', NULL, NULL),
+(2, 'hoi bai', 'hoi bai', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -18995,7 +19197,8 @@ INSERT INTO `theloaide` (`id`, `theLoai`, `lop`, `created_at`, `updated_at`) VAL
 (4, 'Topic/ielts ', 0, '2019-12-17 02:50:45', NULL),
 (5, 'Lớp 10', 10, '2019-12-17 02:50:45', NULL),
 (6, 'Lớp 11', 11, '2019-12-17 02:50:45', NULL),
-(7, 'Lớp 12', 12, '2019-12-17 02:50:45', NULL);
+(7, 'Lớp 12', 12, '2019-12-17 02:50:45', NULL),
+(8, 'toeic2', 0, '2020-01-09 08:46:04', '2020-01-09 08:46:04');
 
 -- --------------------------------------------------------
 
@@ -19024,20 +19227,126 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `quyen`, `avata`, `trangThai`, `score`, `SDT`, `diaChi`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'User_1', 'user_1@gmail.com', '$2y$10$DfXUGS.RZ2yM9auawxFGs.lqEE.8WZdZnqT7l2UYUELxY5rAvdUX6', 0, NULL, 0, 0, '0845846290', NULL, NULL, '2019-12-17 02:50:44', NULL),
-(2, 'User_2', 'user_2@gmail.com', '$2y$10$T4r4AxXgp1kTKJGGSnA9p.JrTUNyUL4Tf1spLvKAAxqE2Tdhg5ASa', 1, NULL, 0, 0, '0851743151', NULL, NULL, '2019-12-17 02:50:44', NULL),
+(1, 'User_1', 'user_1@gmail.com', '$2y$10$DfXUGS.RZ2yM9auawxFGs.lqEE.8WZdZnqT7l2UYUELxY5rAvdUX6', 0, 'person_1.jpg', 1, 4, '0845846290', NULL, NULL, '2019-12-17 02:50:44', '2020-01-10 00:53:54'),
+(2, 'User_2', 'user_2@gmail.com', '$2y$10$nL3Yc4m9B/LV9OTZq1g6Q.S1EkLM7/M8AclHtmHqMrUkBnIsZvnei', 0, 'person_2.jpg', 0, 0, '0851743151', NULL, NULL, '2019-12-17 02:50:44', '2020-01-09 09:24:58'),
 (3, 'User_3', 'user_3@gmail.com', '$2y$10$eCRurTMVa3pN02iK8L5rked43kbxAoBssO.fbGCGGAEgJ1K8toAPO', 0, NULL, 0, 0, '0440120714', NULL, NULL, '2019-12-17 02:50:44', NULL),
 (4, 'User_4', 'user_4@gmail.com', '$2y$10$DrCn5PGeIKrcILw6FHtXOeATYJ0PASxnlRENSbT8rhGf6ISaGmaGW', 0, NULL, 0, 0, '0988553698', NULL, NULL, '2019-12-17 02:50:44', NULL),
-(5, 'User_5', 'user_5@gmail.com', '$2y$10$6wH3vpXcOixYH9zqsRe6D.3KVlPdMAt5oPsMAmqXe/YB8JlPov8xm', 1, NULL, 1, 0, '0107186878', NULL, NULL, '2019-12-17 02:50:44', NULL),
+(5, 'User_5', 'user_5@gmail.com', '$2y$10$i3RpRFaFwBAaiZD5g7EQd.iw7BWCvIPnMsWD4pPikSd1k1t7zIOb6', 0, 'anhprofile2318.png', 0, 0, '0107186878', NULL, NULL, '2019-12-17 02:50:44', '2020-01-09 09:25:23'),
 (6, 'User_6', 'user_6@gmail.com', '$2y$10$DaG0V5g.sKoEDAKotSSmpu2SxEYWrcfS5vDF51Yr5UuXiHTkQ10wG', 0, NULL, 0, 0, '0139603455', NULL, NULL, '2019-12-17 02:50:44', NULL),
-(7, 'User_7', 'user_7@gmail.com', '$2y$10$G7UyUYZiqg18vC1fI9gYGOWUEg2WEunm7SVvwp2A1vapDxw6WMvam', 1, NULL, 1, 0, '0196362586', NULL, NULL, '2019-12-17 02:50:44', NULL),
-(8, 'User_8', 'user_8@gmail.com', '$2y$10$DeVwC2Rn3cAGO/3s2ppoEesprQiceqdqKzcYzqHv1kBqcAirzqp1m', 1, NULL, 1, 0, '0607898809', NULL, NULL, '2019-12-17 02:50:45', NULL),
-(9, 'User_9', 'user_9@gmail.com', '$2y$10$nzu4iJ55z4RwI3y7s7lCR.ntgsZsAHeIvlzzX78GyKGMUun.9ukyW', 1, NULL, 1, 0, '0598902888', NULL, NULL, '2019-12-17 02:50:45', NULL),
-(10, 'User_10', 'user_10@gmail.com', '$2y$10$IuycvZV/wQGLqiLCJ496UOkwVUniwaaRs.hX0XWBwUYVlY9FxCCWK', 1, NULL, 0, 0, '0386470592', NULL, NULL, '2019-12-17 02:50:45', NULL);
+(7, 'User_7', 'user_7@gmail.com', '$2y$10$G7UyUYZiqg18vC1fI9gYGOWUEg2WEunm7SVvwp2A1vapDxw6WMvam', 0, NULL, 0, 0, '0196362586', NULL, NULL, '2019-12-17 02:50:44', NULL),
+(8, 'User_8', 'user_8@gmail.com', '$2y$10$DeVwC2Rn3cAGO/3s2ppoEesprQiceqdqKzcYzqHv1kBqcAirzqp1m', 0, NULL, 0, 0, '0607898809', NULL, NULL, '2019-12-17 02:50:45', NULL),
+(9, 'User_9', 'user_9@gmail.com', '$2y$10$nzu4iJ55z4RwI3y7s7lCR.ntgsZsAHeIvlzzX78GyKGMUun.9ukyW', 0, NULL, 0, 0, '0598902888', NULL, NULL, '2019-12-17 02:50:45', NULL),
+(10, 'User_10', 'user_10@gmail.com', '$2y$10$IuycvZV/wQGLqiLCJ496UOkwVUniwaaRs.hX0XWBwUYVlY9FxCCWK', 0, NULL, 0, 0, '0386470592', NULL, NULL, '2019-12-17 02:50:45', NULL),
+(13, 'admin', 'long@gmail.com', '$2y$10$SxNAYPcMequ56/booD/iSuNS12NbKw.WOG.OhItRhQ1SSawULhNI2', 1, 'anhchó-husky-ngáo219.jpg', 0, 99999, '09999999', 'hn', NULL, '2020-01-09 09:40:02', '2020-01-10 00:29:00');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `views`
+--
+
+CREATE TABLE `views` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `visitor_id` int(11) NOT NULL,
+  `post_id` int(11) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `views`
+--
+
+INSERT INTO `views` (`id`, `visitor_id`, `post_id`, `created_at`, `updated_at`) VALUES
+(51, 1, 10, '2020-01-07 19:28:28', '2020-01-07 19:28:28'),
+(52, 1, 10, '2020-01-07 19:28:36', '2020-01-07 19:28:36'),
+(53, 1, 10, '2020-01-07 19:29:13', '2020-01-07 19:29:13'),
+(54, 1, 10, '2020-01-07 19:29:14', '2020-01-07 19:29:14'),
+(55, 1, 10, '2020-01-07 19:29:15', '2020-01-07 19:29:15'),
+(56, 1, 10, '2020-01-07 19:29:16', '2020-01-07 19:29:16'),
+(57, 1, 10, '2020-01-07 19:29:17', '2020-01-07 19:29:17'),
+(58, 1, 10, '2020-01-07 19:31:19', '2020-01-07 19:31:19'),
+(59, 1, 10, '2020-01-07 19:31:41', '2020-01-07 19:31:41'),
+(60, 1, 10, '2020-01-07 19:32:19', '2020-01-07 19:32:19'),
+(61, 1, 10, '2020-01-07 19:32:33', '2020-01-07 19:32:33'),
+(62, 571472, 11, '2020-01-07 19:32:57', '2020-01-07 19:32:57'),
+(63, 31684, 11, '2020-01-07 19:33:03', '2020-01-07 19:33:03'),
+(64, 71333, 11, '2020-01-07 19:33:07', '2020-01-07 19:33:07'),
+(65, 112068, 11, '2020-01-07 19:33:11', '2020-01-07 19:33:11'),
+(66, 2, 11, '2020-01-07 19:33:49', '2020-01-07 19:33:49'),
+(67, 2, 11, '2020-01-07 19:33:52', '2020-01-07 19:33:52'),
+(68, 2, 11, '2020-01-07 19:34:00', '2020-01-07 19:34:00'),
+(69, 131051, 11, '2020-01-07 19:34:13', '2020-01-07 19:34:13'),
+(70, 21736, 10, '2020-01-07 19:40:02', '2020-01-07 19:40:02'),
+(71, 532361, 10, '2020-01-07 19:41:53', '2020-01-07 19:41:53'),
+(72, 121788, 11, '2020-01-07 19:42:12', '2020-01-07 19:42:12'),
+(73, 2, 13, '2020-01-07 20:02:50', '2020-01-07 20:02:50'),
+(74, 2, 13, '2020-01-07 20:03:04', '2020-01-07 20:03:04'),
+(75, 2, 13, '2020-01-07 20:03:17', '2020-01-07 20:03:17'),
+(76, 2, 14, '2020-01-07 20:05:04', '2020-01-07 20:05:04'),
+(77, 2, 14, '2020-01-07 20:07:00', '2020-01-07 20:07:00'),
+(78, 2, 14, '2020-01-07 20:08:29', '2020-01-07 20:08:29'),
+(79, 401923, 14, '2020-01-07 20:08:40', '2020-01-07 20:08:40'),
+(80, 252015, 14, '2020-01-07 20:10:25', '2020-01-07 20:10:25'),
+(81, 62125, 14, '2020-01-07 20:11:06', '2020-01-07 20:11:06'),
+(82, 1, 14, '2020-01-07 20:11:24', '2020-01-07 20:11:24'),
+(83, 1, 14, '2020-01-07 20:11:34', '2020-01-07 20:11:34'),
+(84, 1, 14, '2020-01-07 20:12:14', '2020-01-07 20:12:14'),
+(85, 1, 14, '2020-01-07 20:12:47', '2020-01-07 20:12:47'),
+(86, 1, 14, '2020-01-07 20:13:51', '2020-01-07 20:13:51'),
+(87, 1, 14, '2020-01-07 20:14:18', '2020-01-07 20:14:18'),
+(88, 1, 14, '2020-01-07 20:14:32', '2020-01-07 20:14:32'),
+(89, 441708, 14, '2020-01-07 20:14:44', '2020-01-07 20:14:44'),
+(90, 331200, 14, '2020-01-07 20:16:33', '2020-01-07 20:16:33'),
+(91, 1, 14, '2020-01-07 20:16:53', '2020-01-07 20:16:53'),
+(92, 2, 14, '2020-01-07 20:17:19', '2020-01-07 20:17:19'),
+(93, 2, 14, '2020-01-07 20:18:17', '2020-01-07 20:18:17'),
+(94, 2, 14, '2020-01-07 20:18:38', '2020-01-07 20:18:38'),
+(95, 292035, 14, '2020-01-09 03:57:29', '2020-01-09 03:57:29'),
+(96, 1, 15, '2020-01-09 03:58:18', '2020-01-09 03:58:18'),
+(97, 1, 15, '2020-01-09 03:58:27', '2020-01-09 03:58:27'),
+(98, 1, 15, '2020-01-09 03:58:44', '2020-01-09 03:58:44'),
+(99, 2, 15, '2020-01-09 03:59:10', '2020-01-09 03:59:10'),
+(100, 2, 15, '2020-01-09 03:59:24', '2020-01-09 03:59:24'),
+(101, 2, 15, '2020-01-09 03:59:33', '2020-01-09 03:59:33'),
+(102, 501254, 8, '2020-01-09 03:59:50', '2020-01-09 03:59:50'),
+(103, 52144, 15, '2020-01-09 04:00:05', '2020-01-09 04:00:05'),
+(104, 91604, 15, '2020-01-09 04:00:09', '2020-01-09 04:00:09'),
+(105, 102152, 15, '2020-01-09 04:00:10', '2020-01-09 04:00:10'),
+(106, 111625, 15, '2020-01-09 04:00:11', '2020-01-09 04:00:11'),
+(107, 112031, 15, '2020-01-09 04:00:11', '2020-01-09 04:00:11'),
+(108, 121201, 15, '2020-01-09 04:00:12', '2020-01-09 04:00:12'),
+(109, 131890, 15, '2020-01-09 04:00:13', '2020-01-09 04:00:13'),
+(110, 131563, 15, '2020-01-09 04:00:13', '2020-01-09 04:00:13'),
+(111, 132800, 15, '2020-01-09 04:00:13', '2020-01-09 04:00:13'),
+(112, 1, 16, '2020-01-09 04:02:54', '2020-01-09 04:02:54'),
+(113, 1, 16, '2020-01-09 04:03:05', '2020-01-09 04:03:05'),
+(114, 1, 16, '2020-01-09 04:03:30', '2020-01-09 04:03:30'),
+(115, 402899, 16, '2020-01-09 04:03:40', '2020-01-09 04:03:40'),
+(116, 462738, 16, '2020-01-09 04:03:46', '2020-01-09 04:03:46'),
+(117, 481413, 16, '2020-01-09 04:03:48', '2020-01-09 04:03:48'),
+(118, 491788, 16, '2020-01-09 04:03:49', '2020-01-09 04:03:49'),
+(119, 2, 16, '2020-01-09 04:04:20', '2020-01-09 04:04:20'),
+(120, 2, 16, '2020-01-09 04:04:29', '2020-01-09 04:04:29'),
+(121, 2, 16, '2020-01-09 04:04:42', '2020-01-09 04:04:42'),
+(122, 13, 17, '2020-01-09 10:30:13', '2020-01-09 10:30:13'),
+(123, 13, 17, '2020-01-09 10:30:28', '2020-01-09 10:30:28'),
+(124, 13, 16, '2020-01-09 10:30:46', '2020-01-09 10:30:46'),
+(125, 13, 16, '2020-01-09 10:30:55', '2020-01-09 10:30:55'),
+(126, 13, 16, '2020-01-09 10:31:08', '2020-01-09 10:31:08'),
+(127, 13, 16, '2020-01-09 11:28:25', '2020-01-09 11:28:25'),
+(128, 1, 18, '2020-01-10 01:08:09', '2020-01-10 01:08:09'),
+(129, 1, 18, '2020-01-10 01:08:16', '2020-01-10 01:08:16');
 
 --
 -- Chỉ mục cho các bảng đã đổ
 --
+
+--
+-- Chỉ mục cho bảng `binhluans`
+--
+ALTER TABLE `binhluans`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Chỉ mục cho bảng `cacdangbai`
@@ -19077,6 +19386,24 @@ ALTER TABLE `dethi`
   ADD KEY `dethi_id_theloaide_foreign` (`id_theLoaiDe`);
 
 --
+-- Chỉ mục cho bảng `forums`
+--
+ALTER TABLE `forums`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Chỉ mục cho bảng `forum_dethi`
+--
+ALTER TABLE `forum_dethi`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Chỉ mục cho bảng `forum_tag`
+--
+ALTER TABLE `forum_tag`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Chỉ mục cho bảng `ketqua`
 --
 ALTER TABLE `ketqua`
@@ -19097,6 +19424,18 @@ ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Chỉ mục cho bảng `noidungkienthuc`
+--
+ALTER TABLE `noidungkienthuc`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Chỉ mục cho bảng `tags`
+--
+ALTER TABLE `tags`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Chỉ mục cho bảng `theloaide`
 --
 ALTER TABLE `theloaide`
@@ -19111,26 +19450,38 @@ ALTER TABLE `users`
   ADD UNIQUE KEY `users_email_unique` (`email`);
 
 --
+-- Chỉ mục cho bảng `views`
+--
+ALTER TABLE `views`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT cho các bảng đã đổ
 --
+
+--
+-- AUTO_INCREMENT cho bảng `binhluans`
+--
+ALTER TABLE `binhluans`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT cho bảng `cacdangbai`
 --
 ALTER TABLE `cacdangbai`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT cho bảng `cauhoi`
 --
 ALTER TABLE `cauhoi`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2501;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2502;
 
 --
 -- AUTO_INCREMENT cho bảng `cautraloi`
 --
 ALTER TABLE `cautraloi`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10001;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10005;
 
 --
 -- AUTO_INCREMENT cho bảng `comment`
@@ -19142,7 +19493,25 @@ ALTER TABLE `comment`
 -- AUTO_INCREMENT cho bảng `dethi`
 --
 ALTER TABLE `dethi`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+
+--
+-- AUTO_INCREMENT cho bảng `forums`
+--
+ALTER TABLE `forums`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+
+--
+-- AUTO_INCREMENT cho bảng `forum_dethi`
+--
+ALTER TABLE `forum_dethi`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT cho bảng `forum_tag`
+--
+ALTER TABLE `forum_tag`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT cho bảng `ketqua`
@@ -19160,19 +19529,37 @@ ALTER TABLE `luukq`
 -- AUTO_INCREMENT cho bảng `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
+
+--
+-- AUTO_INCREMENT cho bảng `noidungkienthuc`
+--
+ALTER TABLE `noidungkienthuc`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT cho bảng `tags`
+--
+ALTER TABLE `tags`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT cho bảng `theloaide`
 --
 ALTER TABLE `theloaide`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT cho bảng `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+
+--
+-- AUTO_INCREMENT cho bảng `views`
+--
+ALTER TABLE `views`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=130;
 
 --
 -- Các ràng buộc cho các bảng đã đổ
