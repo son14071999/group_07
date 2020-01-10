@@ -73,7 +73,7 @@
             <nav class="site-navigation position-relative text-right" role="navigation">
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
                 <li>
-                  <a href="index.blade.php" class="nav-link text-left">Home</a>
+                  <a href="{{ route('home') }}" class="nav-link text-left">Home</a>
                 </li>
               
               </ul>                                                                                                                                                                                                                                                                                          </ul>
@@ -111,14 +111,15 @@
     <div class="site-section">
         <div class="container">
 
-      
+            <form action="{{ route('xulydk') }}" class="themtaikhoan" method="POST" enctype="multipart/form-data">
+              {{ csrf_field() }}
             <div class="row justify-content-center">
               <form action="" method="post">
                 <div class="col-md-5">
                     <div class="row">
                         <div class="col-md-12 form-group">
                             <label for="username">Username</label>
-                            <input type="text" id="username" class="form-control form-control-lg"  name="username">
+                            <input type="text" id="username" class="form-control form-control-lg"  name="tendangnhap">
                         </div>
                         <div class="col-md-12 form-group">
                             <label for="email">Email</label>
@@ -126,15 +127,19 @@
                         </div>
                         <div class="col-md-12 form-group">
                             <label for="pword">Password</label>
-                            <input type="password" id="pword" class="form-control form-control-lg" name="password">
+                            <input type="password" id="pword" class="form-control form-control-lg" name="pass">
                         </div>
                         <div class="col-md-12 form-group">
                             <label for="pword2">Telephone</label>
-                            <input type="password" id="pword2" class="form-control form-control-lg" name="sdt">
+                            <input type="text" id="pword2" class="form-control form-control-lg" name="sdt">
                         </div>
                         <div class="col-md-12 form-group">
                             <label for="pword2">Address</label>
-                            <input type="password" id="pword2" class="form-control form-control-lg" name="diachi">
+                            <input type="text" id="pword2" class="form-control form-control-lg" name="diachi">
+                        </div>
+                        <div class="col-md-12 form-group">
+                            <label for="pword2">Hình ảnh</label>
+                            <input type="file" id="file" name="avata">
                         </div>
                     </div>
                     <div class="row">
@@ -146,7 +151,7 @@
                 </form>
             </div>
 
-
+            </form>
 
         </div>
     </div>

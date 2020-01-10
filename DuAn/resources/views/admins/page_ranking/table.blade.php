@@ -9,7 +9,7 @@ Bảng xếp hạng
         <div class="col-lg-12">
           <h2>Tài khoản </h2>
           <ol class="breadcrumb">
-            <li class="breadcrumb-item"> <a href="{{ URL::to('/trangchu-admin') }}">Trang chủ</a> </li>
+            <li class="breadcrumb-item"> <a href="{{ route('home') }}">Trang chủ</a> </li>
             <li class="breadcrumb-item"> <a>Dữ liệu</a> </li>
             <li class="breadcrumb-item active"> <strong>Bảng xếp hạng</strong> </li>
             <li class="breadcrumb-item active"> <strong>

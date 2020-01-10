@@ -66,6 +66,41 @@ class Taikhoan extends Controller
         }
     }
 
+     public function register(Request $req){
+        
+        
+        $user = new User();
+        $user->name=$req->tendangnhap;
+        $user->password=Hash::make($req->pass);
+        // $user->hovaten=$req->hovaten;
+        $user->diaChi=$req->diachi;
+        $user->score=0;
+
+        $user->SDT=$req->sdt;
+        $user->email=$req->email;
+        $user->quyen=0;
+        $get_image = $req->file('avata');
+        
+        if($get_image && ($get_image->getClientOriginalExtension()=='png' || $get_image->getClientOriginalExtension()=='jpg'|| $get_image->getClientOriginalExtension()=='gif')){
+            $info = getdate();
+            $duoifile=$get_image->getClientOriginalExtension();
+            $get_name_image = $get_image->getClientOriginalName();// lay ra ten anh lay ca duoi vi du anh1.png
+            $tenImage = current(explode('.', $get_name_image)).$info['seconds']; // phan tach chuoi cach nhau dau . lay chuoi dau tien anh
+            $new_image = 'anh'.$tenImage.rand(0,99).'.'.$duoifile;
+            //echo $new_image;
+            $link = 'images';
+            $get_image->move($link , $new_image);
+            $user->avata=$new_image;
+            $user->save();
+            
+            return redirect('/');
+        }
+        $user->save();
+            
+            return redirect('/');
+
+    }
+
     public function logout(Request $req){
         $user = User::find(Auth::user()->id);
         $user->trangThai=0;

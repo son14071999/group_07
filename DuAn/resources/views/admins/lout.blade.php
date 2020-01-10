@@ -56,8 +56,10 @@
           
           
           <!-- START USER LOGIN DROPDOWN -->
+          @if(Auth::check())
           <li class="dropdown dropdown-user">
             <a data-close-others="true" data-hover="dropdown" data-toggle="dropdown" class="dropdown-toggle" href="javascript:;">
+
             <img src="{{asset('images/'.Auth::user()->avata)}}" class="rounded-circle" alt="">
              <span class="username username-hide-on-mobile"> {{ Auth::user()->name }}</span>             <i class="fa fa-angle-down"></i> </a>
             <ul class="dropdown-menu dropdown-menu-default">
@@ -69,6 +71,7 @@
               </li>
             </ul>
           </li>
+          @endif
           <!-- END USER LOGIN DROPDOWN -->
         </ul>
       </div>

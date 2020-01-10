@@ -23,6 +23,7 @@ Route::get('tk/login', function(){
 Route::get('/register', function(){
     return view('register');
 })->name('register');
+Route::post('xuly_register', 'Taikhoan@register')->name('xulydk');
 Route::post('tk/login', 'Taikhoan@login')->name('loginn');
 Route::post('xuly/{id}','ControllerDe@xuly')->name('xuly');
 Route::get('showkq/{id}','ControllerDe@showkq')->name('showkq');
