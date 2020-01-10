@@ -2,10 +2,10 @@
 -- version 4.9.2
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th1 10, 2020 lúc 09:10 AM
--- Phiên bản máy phục vụ: 10.4.10-MariaDB
--- Phiên bản PHP: 7.3.12
+-- Host: 127.0.0.1
+-- Generation Time: Jan 10, 2020 at 03:58 PM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.4.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `laravel`
+-- Database: `laravel`
 --
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `binhluans`
+-- Table structure for table `binhluans`
 --
 
 CREATE TABLE `binhluans` (
@@ -39,7 +39,7 @@ CREATE TABLE `binhluans` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `binhluans`
+-- Dumping data for table `binhluans`
 --
 
 INSERT INTO `binhluans` (`id`, `user_id`, `content`, `commentable_id`, `commentable_type`, `created_at`, `updated_at`) VALUES
@@ -67,7 +67,7 @@ INSERT INTO `binhluans` (`id`, `user_id`, `content`, `commentable_id`, `commenta
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `cacdangbai`
+-- Table structure for table `cacdangbai`
 --
 
 CREATE TABLE `cacdangbai` (
@@ -79,7 +79,7 @@ CREATE TABLE `cacdangbai` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `cacdangbai`
+-- Dumping data for table `cacdangbai`
 --
 
 INSERT INTO `cacdangbai` (`id`, `id_tl`, `nd`, `created_at`, `updated_at`) VALUES
@@ -129,7 +129,7 @@ INSERT INTO `cacdangbai` (`id`, `id_tl`, `nd`, `created_at`, `updated_at`) VALUE
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `cauhoi`
+-- Table structure for table `cauhoi`
 --
 
 CREATE TABLE `cauhoi` (
@@ -145,7 +145,7 @@ CREATE TABLE `cauhoi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `cauhoi`
+-- Dumping data for table `cauhoi`
 --
 
 INSERT INTO `cauhoi` (`id`, `id_de`, `doKho`, `cauSo`, `image`, `nd`, `id_cdb`, `created_at`, `updated_at`) VALUES
@@ -2652,12 +2652,17 @@ INSERT INTO `cauhoi` (`id`, `id_de`, `doKho`, `cauSo`, `image`, `nd`, `id_cdb`, 
 (2497, 50, 5, 47, NULL, 'nd câu hỏi thứ 47đề 50', 6, '2019-12-17 02:54:27', NULL),
 (2498, 50, 4, 48, NULL, 'nd câu hỏi thứ 48đề 50', 12, '2019-12-17 02:54:27', NULL),
 (2499, 50, 2, 49, NULL, 'nd câu hỏi thứ 49đề 50', 10, '2019-12-17 02:54:27', NULL),
-(2500, 50, 4, 50, NULL, 'nd câu hỏi thứ 50đề 50', 11, '2019-12-17 02:54:27', NULL);
+(2500, 50, 4, 50, NULL, 'nd câu hỏi thứ 50đề 50', 11, '2019-12-17 02:54:27', NULL),
+(2502, 52, 1, 1, '', '10+3=?', 1, '2020-01-10 07:10:42', '2020-01-10 07:10:42'),
+(2503, 53, 1, 1, '', 'Ngiệm của phương trình 4x+7=5', 1, '2020-01-10 07:32:53', '2020-01-10 07:32:53'),
+(2504, 53, 1, 2, '', 'Số phức liên hợp của số phức 3-2i', 1, '2020-01-10 07:41:45', '2020-01-10 07:41:45'),
+(2505, 53, 1, 3, '', 'Thể tích khối lăng trụ', 1, '2020-01-10 07:43:20', '2020-01-10 07:43:20'),
+(2506, 53, 1, 4, '', 'Nghiệm của phương trình 5x+2=12', 1, '2020-01-10 07:46:49', '2020-01-10 07:46:49');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `cautraloi`
+-- Table structure for table `cautraloi`
 --
 
 CREATE TABLE `cautraloi` (
@@ -2672,7 +2677,7 @@ CREATE TABLE `cautraloi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `cautraloi`
+-- Dumping data for table `cautraloi`
 --
 
 INSERT INTO `cautraloi` (`id`, `id_cauHoi`, `nd`, `maCTL`, `trangThai`, `image`, `created_at`, `updated_at`) VALUES
@@ -12694,12 +12699,32 @@ INSERT INTO `cautraloi` (`id`, `id_cauHoi`, `nd`, `maCTL`, `trangThai`, `image`,
 (9997, 2500, 'nội dung câu trả lời 1của câu hỏi2500', 'A', 0, NULL, '2019-12-17 03:02:41', NULL),
 (9998, 2500, 'nội dung câu trả lời 2của câu hỏi2500', 'B', 0, NULL, '2019-12-17 03:02:41', NULL),
 (9999, 2500, 'nội dung câu trả lời 3của câu hỏi2500', 'C', 1, NULL, '2019-12-17 03:02:41', NULL),
-(10000, 2500, 'nội dung câu trả lời 4của câu hỏi2500', 'D', 0, NULL, '2019-12-17 03:02:41', NULL);
+(10000, 2500, 'nội dung câu trả lời 4của câu hỏi2500', 'D', 0, NULL, '2019-12-17 03:02:41', NULL),
+(10005, 2502, '11', 'A', 0, '', '2020-01-10 07:10:42', '2020-01-10 07:10:42'),
+(10006, 2502, '12', 'B', 0, '', '2020-01-10 07:10:42', '2020-01-10 07:10:42'),
+(10007, 2502, '13', 'C', 1, '', '2020-01-10 07:10:42', '2020-01-10 07:10:42'),
+(10008, 2502, '15', 'D', 0, '', '2020-01-10 07:10:42', '2020-01-10 07:10:42'),
+(10009, 2503, '11', 'A', 0, '', '2020-01-10 07:32:53', '2020-01-10 07:32:53'),
+(10010, 2503, '-1/2', 'B', 1, '', '2020-01-10 07:32:53', '2020-01-10 07:32:53'),
+(10011, 2503, '13', 'C', 0, '', '2020-01-10 07:32:53', '2020-01-10 07:32:53'),
+(10012, 2503, '4', 'D', 0, '', '2020-01-10 07:32:53', '2020-01-10 07:32:53'),
+(10013, 2504, '-3-2i', 'A', 1, '', '2020-01-10 07:41:45', '2020-01-10 07:41:45'),
+(10014, 2504, '-1/2', 'B', 0, '', '2020-01-10 07:41:45', '2020-01-10 07:41:45'),
+(10015, 2504, '13', 'C', 0, '', '2020-01-10 07:41:45', '2020-01-10 07:41:45'),
+(10016, 2504, '3i+2', 'D', 0, '', '2020-01-10 07:41:45', '2020-01-10 07:41:45'),
+(10017, 2505, '4/3Bh', 'A', 1, '', '2020-01-10 07:43:21', '2020-01-10 07:43:21'),
+(10018, 2505, '1/3Bh', 'B', 0, '', '2020-01-10 07:43:21', '2020-01-10 07:43:21'),
+(10019, 2505, 'Bh', 'C', 0, '', '2020-01-10 07:43:21', '2020-01-10 07:43:21'),
+(10020, 2505, '2/3Bh', 'D', 0, '', '2020-01-10 07:43:21', '2020-01-10 07:43:21'),
+(10021, 2506, '10', 'A', 0, '', '2020-01-10 07:46:49', '2020-01-10 07:46:49'),
+(10022, 2506, '2', 'B', 1, '', '2020-01-10 07:46:49', '2020-01-10 07:46:49'),
+(10023, 2506, '13', 'C', 0, '', '2020-01-10 07:46:49', '2020-01-10 07:46:49'),
+(10024, 2506, '11', 'D', 0, '', '2020-01-10 07:46:49', '2020-01-10 07:46:49');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `comment`
+-- Table structure for table `comment`
 --
 
 CREATE TABLE `comment` (
@@ -12712,7 +12737,7 @@ CREATE TABLE `comment` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `comment`
+-- Dumping data for table `comment`
 --
 
 INSERT INTO `comment` (`id`, `id_user`, `nd`, `id_deThi`, `created_at`, `updated_at`) VALUES
@@ -14722,7 +14747,7 @@ INSERT INTO `comment` (`id`, `id_user`, `nd`, `id_deThi`, `created_at`, `updated
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `dethi`
+-- Table structure for table `dethi`
 --
 
 CREATE TABLE `dethi` (
@@ -14742,7 +14767,7 @@ CREATE TABLE `dethi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `dethi`
+-- Dumping data for table `dethi`
 --
 
 INSERT INTO `dethi` (`id`, `tenDe`, `tenDeKhongDau`, `id_theLoaiDe`, `nam`, `mon`, `kieuDe`, `soNguoiLam`, `doKho`, `thoiGian`, `created_at`, `updated_at`, `image`) VALUES
@@ -14796,12 +14821,14 @@ INSERT INTO `dethi` (`id`, `tenDe`, `tenDeKhongDau`, `id_theLoaiDe`, `nam`, `mon
 (48, 'Tên đề 48478', 'Ten de 48478', 4, 2018, 'Công dân', 0, 55, 5, 70, '2019-12-17 02:50:48', NULL, NULL),
 (49, 'Tên đề 49522', 'Ten de 49522', 7, 2013, 'Công dân', 1, 56, 5, 70, '2019-12-17 02:50:48', NULL, NULL),
 (50, 'Tên đề 50208', 'Ten de 50208', 4, 2010, 'Công dân', 0, 32, 1, 40, '2019-12-17 02:50:48', NULL, NULL),
-(51, 'longdz', 'longdz', 3, 12111111, 'ta', 0, 0, 4, 212, '2020-01-09 08:48:47', '2020-01-09 08:52:13', NULL);
+(51, 'longdz', 'longdz', 3, 12111111, 'ta', 0, 0, 4, 212, '2020-01-09 08:48:47', '2020-01-09 08:52:13', NULL),
+(52, 'Toan', 'toan', 1, 2012, '12', 0, 0, 4, 12, '2020-01-10 07:09:49', '2020-01-10 07:09:49', NULL),
+(53, 'Toán', 'toán', 5, 2020, 'Toán', 0, 0, 2, 12, '2020-01-10 07:30:45', '2020-01-10 07:30:45', NULL);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `forums`
+-- Table structure for table `forums`
 --
 
 CREATE TABLE `forums` (
@@ -14815,7 +14842,7 @@ CREATE TABLE `forums` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `forums`
+-- Dumping data for table `forums`
 --
 
 INSERT INTO `forums` (`id`, `user_id`, `title`, `slug`, `description`, `created_at`, `updated_at`) VALUES
@@ -14841,7 +14868,7 @@ INSERT INTO `forums` (`id`, `user_id`, `title`, `slug`, `description`, `created_
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `forum_dethi`
+-- Table structure for table `forum_dethi`
 --
 
 CREATE TABLE `forum_dethi` (
@@ -14853,7 +14880,7 @@ CREATE TABLE `forum_dethi` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `forum_tag`
+-- Table structure for table `forum_tag`
 --
 
 CREATE TABLE `forum_tag` (
@@ -14865,7 +14892,7 @@ CREATE TABLE `forum_tag` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `forum_tag`
+-- Dumping data for table `forum_tag`
 --
 
 INSERT INTO `forum_tag` (`id`, `forum_id`, `tag_id`, `created_at`, `updated_at`) VALUES
@@ -14893,7 +14920,7 @@ INSERT INTO `forum_tag` (`id`, `forum_id`, `tag_id`, `created_at`, `updated_at`)
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `ketqua`
+-- Table structure for table `ketqua`
 --
 
 CREATE TABLE `ketqua` (
@@ -14906,7 +14933,7 @@ CREATE TABLE `ketqua` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `ketqua`
+-- Dumping data for table `ketqua`
 --
 
 INSERT INTO `ketqua` (`id`, `id_deThi`, `id_user`, `score`, `created_at`, `updated_at`) VALUES
@@ -19087,7 +19114,7 @@ INSERT INTO `ketqua` (`id`, `id_deThi`, `id_user`, `score`, `created_at`, `updat
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `luukq`
+-- Table structure for table `luukq`
 --
 
 CREATE TABLE `luukq` (
@@ -19102,7 +19129,7 @@ CREATE TABLE `luukq` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `migrations`
+-- Table structure for table `migrations`
 --
 
 CREATE TABLE `migrations` (
@@ -19112,7 +19139,7 @@ CREATE TABLE `migrations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `migrations`
+-- Dumping data for table `migrations`
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
@@ -19138,7 +19165,7 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `noidungkienthuc`
+-- Table structure for table `noidungkienthuc`
 --
 
 CREATE TABLE `noidungkienthuc` (
@@ -19153,7 +19180,7 @@ CREATE TABLE `noidungkienthuc` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `tags`
+-- Table structure for table `tags`
 --
 
 CREATE TABLE `tags` (
@@ -19165,7 +19192,7 @@ CREATE TABLE `tags` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `tags`
+-- Dumping data for table `tags`
 --
 
 INSERT INTO `tags` (`id`, `name`, `slug`, `created_at`, `updated_at`) VALUES
@@ -19175,7 +19202,7 @@ INSERT INTO `tags` (`id`, `name`, `slug`, `created_at`, `updated_at`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `theloaide`
+-- Table structure for table `theloaide`
 --
 
 CREATE TABLE `theloaide` (
@@ -19187,7 +19214,7 @@ CREATE TABLE `theloaide` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `theloaide`
+-- Dumping data for table `theloaide`
 --
 
 INSERT INTO `theloaide` (`id`, `theLoai`, `lop`, `created_at`, `updated_at`) VALUES
@@ -19203,7 +19230,7 @@ INSERT INTO `theloaide` (`id`, `theLoai`, `lop`, `created_at`, `updated_at`) VAL
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `users`
+-- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
@@ -19223,11 +19250,11 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `users`
+-- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `quyen`, `avata`, `trangThai`, `score`, `SDT`, `diaChi`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'User_1', 'user_1@gmail.com', '$2y$10$DfXUGS.RZ2yM9auawxFGs.lqEE.8WZdZnqT7l2UYUELxY5rAvdUX6', 0, 'person_1.jpg', 1, 4, '0845846290', NULL, NULL, '2019-12-17 02:50:44', '2020-01-10 00:53:54'),
+(1, 'User_1', 'user_1@gmail.com', '$2y$10$DfXUGS.RZ2yM9auawxFGs.lqEE.8WZdZnqT7l2UYUELxY5rAvdUX6', 0, 'person_1.jpg', 0, 7, '0845846290', NULL, NULL, '2019-12-17 02:50:44', '2020-01-10 07:57:15'),
 (2, 'User_2', 'user_2@gmail.com', '$2y$10$nL3Yc4m9B/LV9OTZq1g6Q.S1EkLM7/M8AclHtmHqMrUkBnIsZvnei', 0, 'person_2.jpg', 0, 0, '0851743151', NULL, NULL, '2019-12-17 02:50:44', '2020-01-09 09:24:58'),
 (3, 'User_3', 'user_3@gmail.com', '$2y$10$eCRurTMVa3pN02iK8L5rked43kbxAoBssO.fbGCGGAEgJ1K8toAPO', 0, NULL, 0, 0, '0440120714', NULL, NULL, '2019-12-17 02:50:44', NULL),
 (4, 'User_4', 'user_4@gmail.com', '$2y$10$DrCn5PGeIKrcILw6FHtXOeATYJ0PASxnlRENSbT8rhGf6ISaGmaGW', 0, NULL, 0, 0, '0988553698', NULL, NULL, '2019-12-17 02:50:44', NULL),
@@ -19237,12 +19264,12 @@ INSERT INTO `users` (`id`, `name`, `email`, `password`, `quyen`, `avata`, `trang
 (8, 'User_8', 'user_8@gmail.com', '$2y$10$DeVwC2Rn3cAGO/3s2ppoEesprQiceqdqKzcYzqHv1kBqcAirzqp1m', 0, NULL, 0, 0, '0607898809', NULL, NULL, '2019-12-17 02:50:45', NULL),
 (9, 'User_9', 'user_9@gmail.com', '$2y$10$nzu4iJ55z4RwI3y7s7lCR.ntgsZsAHeIvlzzX78GyKGMUun.9ukyW', 0, NULL, 0, 0, '0598902888', NULL, NULL, '2019-12-17 02:50:45', NULL),
 (10, 'User_10', 'user_10@gmail.com', '$2y$10$IuycvZV/wQGLqiLCJ496UOkwVUniwaaRs.hX0XWBwUYVlY9FxCCWK', 0, NULL, 0, 0, '0386470592', NULL, NULL, '2019-12-17 02:50:45', NULL),
-(13, 'admin', 'long@gmail.com', '$2y$10$SxNAYPcMequ56/booD/iSuNS12NbKw.WOG.OhItRhQ1SSawULhNI2', 1, 'anhchó-husky-ngáo219.jpg', 0, 99999, '09999999', 'hn', NULL, '2020-01-09 09:40:02', '2020-01-10 00:29:00');
+(13, 'admin', 'long@gmail.com', '$2y$10$SxNAYPcMequ56/booD/iSuNS12NbKw.WOG.OhItRhQ1SSawULhNI2', 1, 'anhchó-husky-ngáo219.jpg', 0, 100010, '09999999', 'hn', NULL, '2020-01-09 09:40:02', '2020-01-10 07:47:15');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `views`
+-- Table structure for table `views`
 --
 
 CREATE TABLE `views` (
@@ -19254,7 +19281,7 @@ CREATE TABLE `views` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `views`
+-- Dumping data for table `views`
 --
 
 INSERT INTO `views` (`id`, `visitor_id`, `post_id`, `created_at`, `updated_at`) VALUES
@@ -19336,27 +19363,28 @@ INSERT INTO `views` (`id`, `visitor_id`, `post_id`, `created_at`, `updated_at`) 
 (126, 13, 16, '2020-01-09 10:31:08', '2020-01-09 10:31:08'),
 (127, 13, 16, '2020-01-09 11:28:25', '2020-01-09 11:28:25'),
 (128, 1, 18, '2020-01-10 01:08:09', '2020-01-10 01:08:09'),
-(129, 1, 18, '2020-01-10 01:08:16', '2020-01-10 01:08:16');
+(129, 1, 18, '2020-01-10 01:08:16', '2020-01-10 01:08:16'),
+(130, 422069, 18, '2020-01-10 07:57:42', '2020-01-10 07:57:42');
 
 --
--- Chỉ mục cho các bảng đã đổ
+-- Indexes for dumped tables
 --
 
 --
--- Chỉ mục cho bảng `binhluans`
+-- Indexes for table `binhluans`
 --
 ALTER TABLE `binhluans`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `cacdangbai`
+-- Indexes for table `cacdangbai`
 --
 ALTER TABLE `cacdangbai`
   ADD PRIMARY KEY (`id`),
   ADD KEY `cacdangbai_id_tl_foreign` (`id_tl`);
 
 --
--- Chỉ mục cho bảng `cauhoi`
+-- Indexes for table `cauhoi`
 --
 ALTER TABLE `cauhoi`
   ADD PRIMARY KEY (`id`),
@@ -19364,14 +19392,14 @@ ALTER TABLE `cauhoi`
   ADD KEY `cauhoi_id_cdb_foreign` (`id_cdb`);
 
 --
--- Chỉ mục cho bảng `cautraloi`
+-- Indexes for table `cautraloi`
 --
 ALTER TABLE `cautraloi`
   ADD PRIMARY KEY (`id`),
   ADD KEY `cautraloi_id_cauhoi_foreign` (`id_cauHoi`);
 
 --
--- Chỉ mục cho bảng `comment`
+-- Indexes for table `comment`
 --
 ALTER TABLE `comment`
   ADD PRIMARY KEY (`id`),
@@ -19379,32 +19407,32 @@ ALTER TABLE `comment`
   ADD KEY `comment_id_dethi_foreign` (`id_deThi`);
 
 --
--- Chỉ mục cho bảng `dethi`
+-- Indexes for table `dethi`
 --
 ALTER TABLE `dethi`
   ADD PRIMARY KEY (`id`),
   ADD KEY `dethi_id_theloaide_foreign` (`id_theLoaiDe`);
 
 --
--- Chỉ mục cho bảng `forums`
+-- Indexes for table `forums`
 --
 ALTER TABLE `forums`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `forum_dethi`
+-- Indexes for table `forum_dethi`
 --
 ALTER TABLE `forum_dethi`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `forum_tag`
+-- Indexes for table `forum_tag`
 --
 ALTER TABLE `forum_tag`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `ketqua`
+-- Indexes for table `ketqua`
 --
 ALTER TABLE `ketqua`
   ADD PRIMARY KEY (`id`),
@@ -19412,37 +19440,37 @@ ALTER TABLE `ketqua`
   ADD KEY `ketqua_id_user_foreign` (`id_user`);
 
 --
--- Chỉ mục cho bảng `luukq`
+-- Indexes for table `luukq`
 --
 ALTER TABLE `luukq`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `migrations`
+-- Indexes for table `migrations`
 --
 ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `noidungkienthuc`
+-- Indexes for table `noidungkienthuc`
 --
 ALTER TABLE `noidungkienthuc`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `tags`
+-- Indexes for table `tags`
 --
 ALTER TABLE `tags`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `theloaide`
+-- Indexes for table `theloaide`
 --
 ALTER TABLE `theloaide`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `users`
+-- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
@@ -19450,155 +19478,155 @@ ALTER TABLE `users`
   ADD UNIQUE KEY `users_email_unique` (`email`);
 
 --
--- Chỉ mục cho bảng `views`
+-- Indexes for table `views`
 --
 ALTER TABLE `views`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT cho các bảng đã đổ
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT cho bảng `binhluans`
+-- AUTO_INCREMENT for table `binhluans`
 --
 ALTER TABLE `binhluans`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
--- AUTO_INCREMENT cho bảng `cacdangbai`
+-- AUTO_INCREMENT for table `cacdangbai`
 --
 ALTER TABLE `cacdangbai`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
--- AUTO_INCREMENT cho bảng `cauhoi`
+-- AUTO_INCREMENT for table `cauhoi`
 --
 ALTER TABLE `cauhoi`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2502;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2507;
 
 --
--- AUTO_INCREMENT cho bảng `cautraloi`
+-- AUTO_INCREMENT for table `cautraloi`
 --
 ALTER TABLE `cautraloi`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10005;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10025;
 
 --
--- AUTO_INCREMENT cho bảng `comment`
+-- AUTO_INCREMENT for table `comment`
 --
 ALTER TABLE `comment`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2001;
 
 --
--- AUTO_INCREMENT cho bảng `dethi`
+-- AUTO_INCREMENT for table `dethi`
 --
 ALTER TABLE `dethi`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
 
 --
--- AUTO_INCREMENT cho bảng `forums`
+-- AUTO_INCREMENT for table `forums`
 --
 ALTER TABLE `forums`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
--- AUTO_INCREMENT cho bảng `forum_dethi`
+-- AUTO_INCREMENT for table `forum_dethi`
 --
 ALTER TABLE `forum_dethi`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `forum_tag`
+-- AUTO_INCREMENT for table `forum_tag`
 --
 ALTER TABLE `forum_tag`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
--- AUTO_INCREMENT cho bảng `ketqua`
+-- AUTO_INCREMENT for table `ketqua`
 --
 ALTER TABLE `ketqua`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4171;
 
 --
--- AUTO_INCREMENT cho bảng `luukq`
+-- AUTO_INCREMENT for table `luukq`
 --
 ALTER TABLE `luukq`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `migrations`
+-- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
 
 --
--- AUTO_INCREMENT cho bảng `noidungkienthuc`
+-- AUTO_INCREMENT for table `noidungkienthuc`
 --
 ALTER TABLE `noidungkienthuc`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `tags`
+-- AUTO_INCREMENT for table `tags`
 --
 ALTER TABLE `tags`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT cho bảng `theloaide`
+-- AUTO_INCREMENT for table `theloaide`
 --
 ALTER TABLE `theloaide`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT cho bảng `users`
+-- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
--- AUTO_INCREMENT cho bảng `views`
+-- AUTO_INCREMENT for table `views`
 --
 ALTER TABLE `views`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=130;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=131;
 
 --
--- Các ràng buộc cho các bảng đã đổ
+-- Constraints for dumped tables
 --
 
 --
--- Các ràng buộc cho bảng `cacdangbai`
+-- Constraints for table `cacdangbai`
 --
 ALTER TABLE `cacdangbai`
   ADD CONSTRAINT `cacdangbai_id_tl_foreign` FOREIGN KEY (`id_tl`) REFERENCES `theloaide` (`id`) ON DELETE CASCADE;
 
 --
--- Các ràng buộc cho bảng `cauhoi`
+-- Constraints for table `cauhoi`
 --
 ALTER TABLE `cauhoi`
   ADD CONSTRAINT `cauhoi_id_cdb_foreign` FOREIGN KEY (`id_cdb`) REFERENCES `cacdangbai` (`id`) ON DELETE CASCADE,
   ADD CONSTRAINT `cauhoi_id_de_foreign` FOREIGN KEY (`id_de`) REFERENCES `dethi` (`id`) ON DELETE CASCADE;
 
 --
--- Các ràng buộc cho bảng `cautraloi`
+-- Constraints for table `cautraloi`
 --
 ALTER TABLE `cautraloi`
   ADD CONSTRAINT `cautraloi_id_cauhoi_foreign` FOREIGN KEY (`id_cauHoi`) REFERENCES `cauhoi` (`id`) ON DELETE CASCADE;
 
 --
--- Các ràng buộc cho bảng `comment`
+-- Constraints for table `comment`
 --
 ALTER TABLE `comment`
   ADD CONSTRAINT `comment_id_dethi_foreign` FOREIGN KEY (`id_deThi`) REFERENCES `dethi` (`id`) ON DELETE CASCADE,
   ADD CONSTRAINT `comment_id_user_foreign` FOREIGN KEY (`id_user`) REFERENCES `users` (`id`) ON DELETE CASCADE;
 
 --
--- Các ràng buộc cho bảng `dethi`
+-- Constraints for table `dethi`
 --
 ALTER TABLE `dethi`
   ADD CONSTRAINT `dethi_id_theloaide_foreign` FOREIGN KEY (`id_theLoaiDe`) REFERENCES `theloaide` (`id`) ON DELETE CASCADE;
 
 --
--- Các ràng buộc cho bảng `ketqua`
+-- Constraints for table `ketqua`
 --
 ALTER TABLE `ketqua`
   ADD CONSTRAINT `ketqua_id_dethi_foreign` FOREIGN KEY (`id_deThi`) REFERENCES `dethi` (`id`) ON DELETE CASCADE,
