@@ -28,7 +28,7 @@
    * Visual code : [VS](https://code.visualstudio.com/)
    * Conposer : [Conposer](https://getcomposer.org/download/) 
 - b3: Vào localhost add file laravel.sql vào để thêm cơ sở dữ liệu  và chạy chương trình .
-# 5. Thành viên trong nhóm
+# 6. Thành viên trong nhóm
    - Nguyễn Bảo Long
    - Nguyễn Thị Thắm
    - Bùi Thị Vui
