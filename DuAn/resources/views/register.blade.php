@@ -75,36 +75,12 @@
                 <li>
                   <a href="index.blade.php" class="nav-link text-left">Home</a>
                 </li>
-                <li class="has-children">
-                  <a href="about.blade.php" class="nav-link text-left">About Us</a>
-                  <ul class="dropdown">
-                    <li><a href="teachers.html">Our Teachers</a></li>
-                    <li><a href="about.blade.php">Our School</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="admissions.blade.php" class="nav-link text-left">Admissions</a>
-                </li>
-                <li>
-                  <a href="courses.blade.php" class="nav-link text-left">Courses</a>
-                </li>
-                <li>
-                    <a href="contact.blade.php" class="nav-link text-left">Contact</a>
-                  </li>
+              
               </ul>                                                                                                                                                                                                                                                                                          </ul>
             </nav>
 
           </div>
-          <div class="ml-auto">
-            <div class="social-wrap">
-              <a href="#"><span class="icon-facebook"></span></a>
-              <a href="#"><span class="icon-twitter"></span></a>
-              <a href="#"><span class="icon-linkedin"></span></a>
-
-              <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black"><span
-                class="icon-menu h3"></span></a>
-            </div>
-          </div>
+        
 
         </div>
       </div>
@@ -117,7 +93,7 @@
           <div class="row align-items-end justify-content-center text-center">
             <div class="col-lg-7">
               <h2 class="mb-0">Register</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+              <p>Đăng ký tài khoản tại đây</p>
             </div>
           </div>
         </div>
@@ -135,25 +111,30 @@
     <div class="site-section">
         <div class="container">
 
-
+      
             <div class="row justify-content-center">
+              <form action="" method="post">
                 <div class="col-md-5">
                     <div class="row">
                         <div class="col-md-12 form-group">
                             <label for="username">Username</label>
-                            <input type="text" id="username" class="form-control form-control-lg">
+                            <input type="text" id="username" class="form-control form-control-lg"  name="username">
                         </div>
                         <div class="col-md-12 form-group">
                             <label for="email">Email</label>
-                            <input type="email" id="email" class="form-control form-control-lg">
+                            <input type="email" id="email" class="form-control form-control-lg" name="email">
                         </div>
                         <div class="col-md-12 form-group">
                             <label for="pword">Password</label>
-                            <input type="password" id="pword" class="form-control form-control-lg">
+                            <input type="password" id="pword" class="form-control form-control-lg" name="password">
                         </div>
                         <div class="col-md-12 form-group">
-                            <label for="pword2">Re-type Password</label>
-                            <input type="password" id="pword2" class="form-control form-control-lg">
+                            <label for="pword2">Telephone</label>
+                            <input type="password" id="pword2" class="form-control form-control-lg" name="sdt">
+                        </div>
+                        <div class="col-md-12 form-group">
+                            <label for="pword2">Address</label>
+                            <input type="password" id="pword2" class="form-control form-control-lg" name="diachi">
                         </div>
                     </div>
                     <div class="row">
@@ -162,6 +143,7 @@
                         </div>
                     </div>
                 </div>
+                </form>
             </div>
 
 

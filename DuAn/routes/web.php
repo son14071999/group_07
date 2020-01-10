@@ -20,6 +20,9 @@ Route::get('de/{tenDe}','ControllerDe@show_de')->name('showde');
 Route::get('tk/login', function(){
     return view('signup_in.login');
 })->name('login');
+Route::get('/register', function(){
+    return view('register');
+})->name('register');
 Route::post('tk/login', 'Taikhoan@login')->name('loginn');
 Route::post('xuly/{id}','ControllerDe@xuly')->name('xuly');
 Route::get('showkq/{id}','ControllerDe@showkq')->name('showkq');

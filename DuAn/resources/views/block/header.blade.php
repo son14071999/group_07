@@ -14,7 +14,7 @@
             <div class="col-lg-3 text-right">
                 @if(Auth::check()==false)
                     <a href="{{ route('login') }}" class="small mr-3"><span class="icon-unlock-alt"></span> Log In</a>
-                    <a href="" class="small btn btn-primary px-4 py-2 rounded-0"><span class="icon-users"></span> Register</a>
+                    <a href="{{ route('register') }}" class="small btn btn-primary px-4 py-2 rounded-0"><span class="icon-users"></span> Register</a>
                 @else
                     <a href="{{ route('profile', Auth::user()->id) }}" class="small mr-3"><i class="fas fa-user-alt"></i> {{ Auth::user()->name }}</a>
                     <a href="{{route('logout')}}" class="small btn btn-primary px-4 py-2 rounded-0"><i class="fas fa-sign-out-alt"></i> Logout</a>
